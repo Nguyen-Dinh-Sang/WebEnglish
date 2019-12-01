@@ -1,0 +1,11 @@
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Application.deps.json
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Application.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Application.pdb
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.AssemblyInfo.cs
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.csproj.CopyComplete
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.pdb

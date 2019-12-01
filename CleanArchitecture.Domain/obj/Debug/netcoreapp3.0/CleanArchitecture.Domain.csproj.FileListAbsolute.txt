@@ -1,0 +1,7 @@
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.deps.json
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.AssemblyInfo.cs
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
+C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
