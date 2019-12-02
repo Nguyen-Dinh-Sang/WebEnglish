@@ -13,6 +13,13 @@ namespace CleanArchitecture.Data.Context
 
         }
 
-        public DbSet<NguoiDung> NguoiDung { get; set; }
+        public virtual DbSet<NguoiDung> NguoiDung { get; set; }
+        public virtual DbSet<BaiHoc> BaiHoc { get; set; }
+        public virtual DbSet<BaiKiemTra> BaiKiemTra { get; set; }
+        public virtual DbSet<CauHoi> CauHoi { get; set; }
+        public virtual DbSet<ChiTietBaiHoc> ChiTietBaiHoc { get; set; }
+        public virtual DbSet<ChuDe> ChuDe { get; set; }
+        public virtual DbSet<Hoc> Hoc { get; set; }
+        public virtual DbSet<ThamGiaChuDe> ThamGiaChuDe { get; set; }
     }
 }

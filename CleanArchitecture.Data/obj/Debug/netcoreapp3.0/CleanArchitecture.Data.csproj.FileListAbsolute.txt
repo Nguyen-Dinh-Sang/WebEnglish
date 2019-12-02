@@ -11,3 +11,16 @@ C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Data\
 C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.csproj.CopyComplete
 C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.dll
 C:\Users\Admin\Desktop\WEB\LamLaiTuDau\CleanArchitecture\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.pdb
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.deps.json
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.runtimeconfig.json
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.pdb
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.AssemblyInfo.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.csproj.CopyComplete
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.pdb

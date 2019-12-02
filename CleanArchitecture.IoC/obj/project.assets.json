@@ -6789,11 +6789,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
       "projectName": "CleanArchitecture.IoC",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.IoC\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6812,11 +6812,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj"
+            "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj"
+            "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj"
             }
           }
         }

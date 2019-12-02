@@ -7,6 +7,6 @@ namespace CleanArchitecture.Application.ViewModels
 {
     public class NguoiDungViewModel
     {
-        public IEnumerable<NguoiDung> NguoiDungs { get; set; }
+        public IEnumerable<SaveNguoiDung> NguoiDungs { get; set; }
     }
 }

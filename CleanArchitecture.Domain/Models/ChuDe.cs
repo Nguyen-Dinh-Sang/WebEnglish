@@ -3,22 +3,20 @@ using System.Collections.Generic;
 
 namespace CleanArchitecture.Domain.Models
 {
-    public partial class NguoiDung
+    public partial class ChuDe
     {
-        public NguoiDung()
+        public ChuDe()
         {
+            BaiHoc = new HashSet<BaiHoc>();
             ThamGiaChuDe = new HashSet<ThamGiaChuDe>();
         }
 
         public int Id { get; set; }
-        public string TenNguoiDung { get; set; }
-        public string TaiKhoan { get; set; }
-        public string MatKhau { get; set; }
+        public string TenChuDe { get; set; }
+        public string ThongTin { get; set; }
         public DateTime? NgayTao { get; set; }
-        public string SoDienThoai { get; set; }
-        public string Gmail { get; set; }
-        public int? VaiTro { get; set; }
 
+        public virtual ICollection<BaiHoc> BaiHoc { get; set; }
         public virtual ICollection<ThamGiaChuDe> ThamGiaChuDe { get; set; }
     }
 }

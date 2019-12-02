@@ -21,6 +21,7 @@ namespace CleanArchitecture.IoC
 
             // Infrastructure.Data
             services.AddScoped<INguoiDungRepository, NguoiDungRepository>();
+
             services.AddScoped<WebEnglishDBContext>();
 
             services.AddAutoMapper(typeof(MappingProfile));

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
       "projectName": "CleanArchitecture.Domain",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\WEB\\LamLaiTuDau\\CleanArchitecture\\CleanArchitecture.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

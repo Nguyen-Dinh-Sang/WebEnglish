@@ -37,8 +37,10 @@ namespace CleanArchitecture.Application.Services
         {
             return new NguoiDungViewModel()
             {
-                NguoiDungs = iNguoiDungRepository.GetNguoiDungs()
+                NguoiDungs = iMapper.Map<IEnumerable<NguoiDung>, IEnumerable<SaveNguoiDung>>(iNguoiDungRepository.GetNguoiDungs())
             };
+
+
         }
 
         public void remove(int? id)
