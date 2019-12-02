@@ -26,6 +26,11 @@ namespace CleanArchitecture.Data.Repository
             {
                 NguoiDung findResults = webEnglishDBContext.NguoiDung.Find(nguoi.Id);
                 findResults.TenNguoiDung = nguoi.TenNguoiDung;
+                findResults.TaiKhoan = nguoi.TaiKhoan;
+                findResults.Gmail = nguoi.Gmail;
+                findResults.MatKhau = nguoi.MatKhau;
+                findResults.SoDienThoai = nguoi.SoDienThoai;
+                findResults.VaiTro = nguoi.VaiTro;
                 webEnglishDBContext.SaveChanges();
             }
         }

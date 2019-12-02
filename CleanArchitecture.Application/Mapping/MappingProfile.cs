@@ -13,6 +13,9 @@ namespace CleanArchitecture.Application.Mapping
         {
             CreateMap<SaveNguoiDung, NguoiDung>();
             CreateMap<NguoiDung, SaveNguoiDung>();
+
+            CreateMap<ChuDe, ChuDeDTO>();
+            CreateMap<ChuDeDTO, ChuDe>();
         }
     }
 }
