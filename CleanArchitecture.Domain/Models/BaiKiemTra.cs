@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CleanArchitecture.Domain.Interfaces;
 
 namespace CleanArchitecture.Domain.Models
 {
-    public partial class BaiKiemTra
+    public partial class BaiKiemTra : IAggregateRoot
     {
         public BaiKiemTra()
         {

@@ -52,7 +52,8 @@ namespace CleanArchitecture.Data.Context
                 entity.HasOne(d => d.IdchuDeNavigation)
                     .WithMany(p => p.BaiHoc)
                     .HasForeignKey(d => d.IdchuDe)
-                    .HasConstraintName("FK__BaiHoc__IDChuDe__3D2915A8");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("ChuDe_BaiHoc");
             });
 
             modelBuilder.Entity<BaiKiemTra>(entity =>
@@ -68,7 +69,8 @@ namespace CleanArchitecture.Data.Context
                 entity.HasOne(d => d.IdbaiHocNavigation)
                     .WithMany(p => p.BaiKiemTra)
                     .HasForeignKey(d => d.IdbaiHoc)
-                    .HasConstraintName("FK__BaiKiemTr__IDBai__498EEC8D");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("BaiHoc_BaiKiemTra");
             });
 
             modelBuilder.Entity<CauHoi>(entity =>
@@ -107,7 +109,8 @@ namespace CleanArchitecture.Data.Context
                 entity.HasOne(d => d.IdbaiKiemTraNavigation)
                     .WithMany(p => p.CauHoi)
                     .HasForeignKey(d => d.IdbaiKiemTra)
-                    .HasConstraintName("FK__CauHoi__IDBaiKie__756D6ECB");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("BaiKiemTra_CauHoi");
             });
 
             modelBuilder.Entity<ChiTietBaiHoc>(entity =>
@@ -129,7 +132,8 @@ namespace CleanArchitecture.Data.Context
                 entity.HasOne(d => d.IdbaiHocNavigation)
                     .WithMany(p => p.ChiTietBaiHoc)
                     .HasForeignKey(d => d.IdbaiHoc)
-                    .HasConstraintName("FK__ChiTietBa__IDBai__625A9A57");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("BaiHoc_ChiTietBaiHoc");
             });
 
             modelBuilder.Entity<ChuDe>(entity =>
@@ -158,12 +162,13 @@ namespace CleanArchitecture.Data.Context
                 entity.HasOne(d => d.IdbaiHocNavigation)
                     .WithMany(p => p.Hoc)
                     .HasForeignKey(d => d.IdbaiHoc)
-                    .HasConstraintName("FK__Hoc__IDBaiHoc__45BE5BA9");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("BaiHoc_Hoc");
 
                 entity.HasOne(d => d.IdthamGiaChuDeNavigation)
                     .WithMany(p => p.Hoc)
                     .HasForeignKey(d => d.IdthamGiaChuDe)
-                    .HasConstraintName("FK__Hoc__IDThamGiaCh__44CA3770");
+                    .HasConstraintName("ThamGiaChuDe_Hoc");
             });
 
             modelBuilder.Entity<NguoiDung>(entity =>
@@ -206,12 +211,14 @@ namespace CleanArchitecture.Data.Context
                 entity.HasOne(d => d.IdchuDeNavigation)
                     .WithMany(p => p.ThamGiaChuDe)
                     .HasForeignKey(d => d.IdchuDe)
-                    .HasConstraintName("FK__ThamGiaCh__IDChu__3A4CA8FD");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("ChuDe_ThamGiaChuDe");
 
                 entity.HasOne(d => d.IdnguoiDungNavigation)
                     .WithMany(p => p.ThamGiaChuDe)
                     .HasForeignKey(d => d.IdnguoiDung)
-                    .HasConstraintName("FK__ThamGiaCh__IDNgu__395884C4");
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("NguoiDung_ThamGiaChuDe");
             });
 
             OnModelCreatingPartial(modelBuilder);

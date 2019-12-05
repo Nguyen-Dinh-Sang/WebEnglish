@@ -14,5 +14,9 @@ namespace CleanArchitecture.Application.Interfaces
         void Create(ChuDeDTO chuDe);
 
         void Remove(int? Id);
+
+        ICollection<BaiHocDTO> GetBaiHocs(int? Id);
+
+        ICollection<ThamGiaChuDeDTO> GetThamGiaChuDes(int? Id);
     }
 }

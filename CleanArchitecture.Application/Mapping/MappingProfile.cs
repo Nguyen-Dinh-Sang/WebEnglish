@@ -16,6 +16,9 @@ namespace CleanArchitecture.Application.Mapping
 
             CreateMap<ChuDe, ChuDeDTO>();
             CreateMap<ChuDeDTO, ChuDe>();
+
+            CreateMap<BaiHoc, BaiHocDTO>();
+            CreateMap<BaiHocDTO, BaiHoc>();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CleanArchitecture.Application.Services
 
         public void Create(SaveNguoiDung save)
         {
-            var nguoiDung = iMapper.Map<SaveNguoiDung, NguoiDung>(save);
+                var nguoiDung = iMapper.Map<SaveNguoiDung, NguoiDung>(save);
             iNguoiDungRepository.Add(nguoiDung);
         }
 

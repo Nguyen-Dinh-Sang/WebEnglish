@@ -17,5 +17,6 @@ namespace CleanArchitecture.Application.ViewModels
 
         [Display(Name = "Ngày Tạo")]
         public DateTime? NgayTao { get; set; }
+
     }
 }

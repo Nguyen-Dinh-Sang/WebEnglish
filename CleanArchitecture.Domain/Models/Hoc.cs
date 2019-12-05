@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CleanArchitecture.Domain.Interfaces;
 
 namespace CleanArchitecture.Domain.Models
 {
-    public partial class Hoc
+    public partial class Hoc : IAggregateRoot
     {
         public int Id { get; set; }
         public int? IdthamGiaChuDe { get; set; }

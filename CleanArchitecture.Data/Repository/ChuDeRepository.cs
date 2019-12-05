@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using CleanArchitecture.Data.Context;
 using CleanArchitecture.Domain.Interfaces;
@@ -45,9 +46,21 @@ namespace CleanArchitecture.Data.Repository
         public void Remove(int? Id)
         {
             ChuDe findResults = webEnglishDBContext.ChuDe.Find(Id);
-            webEnglishDBContext.Remove(findResults);
-            
+            webEnglishDBContext.ChuDe.Remove(findResults);
             webEnglishDBContext.SaveChanges();
+        }
+
+        public ICollection<BaiHoc> GetBaiHocs(int? Id)
+        {
+            var baiHoc = from m in webEnglishDBContext.BaiHoc
+                           where m.IdchuDe == Id
+                           select m;
+            return baiHoc.Distinct().ToList();
+        }
+
+        public ICollection<ThamGiaChuDe> GetThamGiaChuDes(int? Id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

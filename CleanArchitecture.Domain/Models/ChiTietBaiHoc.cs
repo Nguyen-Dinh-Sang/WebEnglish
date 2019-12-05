@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CleanArchitecture.Domain.Interfaces;
 
 namespace CleanArchitecture.Domain.Models
 {
-    public partial class ChiTietBaiHoc
+    public partial class ChiTietBaiHoc : IAggregateRoot
     {
         public int Id { get; set; }
         public int? IdbaiHoc { get; set; }

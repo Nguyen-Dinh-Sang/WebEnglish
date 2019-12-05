@@ -14,5 +14,9 @@ namespace CleanArchitecture.Domain.Interfaces
         void Create(ChuDe chuDe);
 
         void Remove(int? Id);
+
+        ICollection<BaiHoc> GetBaiHocs(int? Id);
+
+        ICollection<ThamGiaChuDe> GetThamGiaChuDes(int? Id);
     }
 }

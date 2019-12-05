@@ -84,5 +84,22 @@ namespace CleanArchitectur.MVC.Controllers
             }
             return View(chuDe);
         }
+
+        public IActionResult Details(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var chuDeViewDetails = new ChuDeViewDetails()
+                {
+                    chuDe = chuDeService.GetChuDe(Id),
+                    baiHocs = chuDeService.GetBaiHocs(Id)
+                };
+                return View(chuDeViewDetails);
+            }
+        }
     }
 }
