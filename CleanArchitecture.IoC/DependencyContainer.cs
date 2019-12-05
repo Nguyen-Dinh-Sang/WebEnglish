@@ -25,6 +25,11 @@ namespace CleanArchitecture.IoC
             services.AddScoped<WebEnglishDBContext>();
 
             services.AddAutoMapper(typeof(MappingProfile));
+
+            // mỗi đứa một cặp
+            services.AddScoped<IChuDeService, ChuDeService>();
+            services.AddScoped<IChuDeRepository, ChuDeRepository>();
+
         }
     }
 }

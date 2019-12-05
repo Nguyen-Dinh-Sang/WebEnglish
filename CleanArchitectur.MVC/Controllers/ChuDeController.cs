@@ -4,25 +4,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
 {
-    //[Authorize]
-    public class NguoiDungController : Controller
+    public class ChuDeController : Controller
     {
-        private INguoiDungService iNguoiDungService;
+        private IChuDeService chuDeService;
 
-        public NguoiDungController(INguoiDungService iNguoiDungService)
+        public ChuDeController(IChuDeService chuDeService)
         {
-            this.iNguoiDungService = iNguoiDungService;
+            this.chuDeService = chuDeService;
         }
-
         public IActionResult Index()
         {
-            NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
-            return View(model.NguoiDungs);
+            return View(chuDeService.GetChuDes());
         }
 
         [HttpGet]
@@ -32,18 +28,16 @@ namespace CleanArchitectur.MVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(SaveNguoiDung save)
+        public IActionResult Create(ChuDeDTO chuDeDTO)
         {
             if (ModelState.IsValid)
             {
-                save.Id = 0;
-                iNguoiDungService.Create(save);
+                chuDeDTO.Id = 0;
+                chuDeService.Create(chuDeDTO);
                 return RedirectToAction("Index");
             }
-            return View(save);
+            return View(chuDeDTO);
         }
-
-        //[Route("NguoiDung/Delete/{maUser}")]
 
         [HttpGet]
         public IActionResult Delete(int? Id)
@@ -54,15 +48,15 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var nguoiDung = iNguoiDungService.GetNguoiDung(Id);
-                return View(nguoiDung);
+                var chuDe = chuDeService.GetChuDe(Id);
+                return View(chuDe);
             }
         }
 
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirm(int? Id)
         {
-            iNguoiDungService.remove(Id);
+            chuDeService.Remove(Id);
             return RedirectToAction("Index");
         }
 
@@ -75,20 +69,20 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var nguoiDung = iNguoiDungService.GetNguoiDung(Id);
-                return View(nguoiDung);
+                var chuDe = chuDeService.GetChuDe(Id);
+                return View(chuDe);
             }
         }
 
         [HttpPost, ActionName("Edit")]
-        public IActionResult EditConfirm(SaveNguoiDung save)
+        public IActionResult EditConfirm(ChuDeDTO chuDe)
         {
             if (ModelState.IsValid)
             {
-                iNguoiDungService.Create(save);
+                chuDeService.Create(chuDe);
                 return RedirectToAction("Index");
             }
-            return View(save);
+            return View(chuDe);
         }
     }
 }

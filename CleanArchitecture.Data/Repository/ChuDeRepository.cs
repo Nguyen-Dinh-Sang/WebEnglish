@@ -24,24 +24,30 @@ namespace CleanArchitecture.Data.Repository
             }
             else
             {
-                
+                ChuDe findResults = webEnglishDBContext.ChuDe.Find(chuDe.Id);
+                findResults.TenChuDe = chuDe.TenChuDe;
+                findResults.ThongTin = chuDe.ThongTin;
                 webEnglishDBContext.SaveChanges();
             }
         }
 
         public ChuDe GetChuDe(int? Id)
         {
-            throw new NotImplementedException();
+            ChuDe findResults = webEnglishDBContext.ChuDe.Find(Id);
+            return findResults;
         }
 
         public IEnumerable<ChuDe> GetChuDes()
         {
-            throw new NotImplementedException();
+            return webEnglishDBContext.ChuDe;
         }
 
         public void Remove(int? Id)
         {
-            throw new NotImplementedException();
+            ChuDe findResults = webEnglishDBContext.ChuDe.Find(Id);
+            webEnglishDBContext.Remove(findResults);
+            
+            webEnglishDBContext.SaveChanges();
         }
     }
 }

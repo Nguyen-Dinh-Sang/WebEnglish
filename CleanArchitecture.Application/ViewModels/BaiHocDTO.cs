@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CleanArchitecture.Application.ViewModels
 {
-    class BaiHocDTO
+    public class BaiHocDTO
     {
         [Key]
         public int Id { get; set; }

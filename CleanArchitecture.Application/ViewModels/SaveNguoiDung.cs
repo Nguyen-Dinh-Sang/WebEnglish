@@ -17,6 +17,7 @@ namespace CleanArchitecture.Application.ViewModels
         public string TaiKhoan { get; set; }
 
         [Display(Name = "Mật Khẩu")]
+        [Required(ErrorMessage = "Mật Khẩu Không Được Để Trống")]
         public string MatKhau { get; set; }
 
         [Display(Name = "Ngày Tạo")]
@@ -24,7 +25,6 @@ namespace CleanArchitecture.Application.ViewModels
         public DateTime? NgayTao { get; set; }
 
         [Display(Name = "Số Điện Thoại")]
-        [RegularExpression(@"[0 - 9]")]
         public string SoDienThoai { get; set; }
 
         [Display(Name = "Gmail")]

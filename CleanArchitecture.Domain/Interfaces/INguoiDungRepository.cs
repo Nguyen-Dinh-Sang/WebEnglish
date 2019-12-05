@@ -13,5 +13,6 @@ namespace CleanArchitecture.Domain.Interfaces
         void Remove(int? id);
 
         NguoiDung GetNguoiDung(int? iD);
+
     }
 }

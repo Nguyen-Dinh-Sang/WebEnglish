@@ -322,3 +322,6 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\C
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.csproj.CopyComplete
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.dll
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.pdb
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\Index.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\Delete.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\Create.cshtml.g.cs
