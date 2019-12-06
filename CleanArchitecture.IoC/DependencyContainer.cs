@@ -30,6 +30,8 @@ namespace CleanArchitecture.IoC
             services.AddScoped<IChuDeService, ChuDeService>();
             services.AddScoped<IChuDeRepository, ChuDeRepository>();
 
+            services.AddScoped<IBaiHocService, BaiHocService>();
+            services.AddScoped<IBaiHocRepository, BaiHocRepository>();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CleanArchitecture.Domain.Models.BaiHoc>
+﻿@model IEnumerable<CleanArchitecture.Application.ViewModels.BaiHocDTO>
 
 @{
     ViewData["Title"] = "Index";
@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.NgayTao)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdchuDeNavigation)
+                @Html.DisplayNameFor(model => model.IdchuDeNavigation.TenChuDe)
             </th>
             <th></th>
         </tr>
@@ -40,7 +40,7 @@
                 @Html.DisplayFor(modelItem => item.NgayTao)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdchuDeNavigation.Id)
+                @Html.DisplayFor(modelItem => item.IdchuDeNavigation.TenChuDe)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using CleanArchitecture.Domain.Models;
 
 namespace CleanArchitecture.Application.ViewModels
 {
@@ -13,5 +14,7 @@ namespace CleanArchitecture.Application.ViewModels
         public int? BaiSo { get; set; }
         public string TenBaiHoc { get; set; }
         public DateTime? NgayTao { get; set; }
+
+        public virtual ChuDeDTO IdchuDeNavigation { get; set; }
     }
 }

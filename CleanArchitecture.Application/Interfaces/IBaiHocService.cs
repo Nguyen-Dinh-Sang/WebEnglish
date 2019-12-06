@@ -11,7 +11,7 @@ namespace CleanArchitecture.Application.Interfaces
 
         BaiHocDTO GetBaiHoc(int? Id);
 
-        void Create(ChuDeDTO chuDe);
+        void Create(BaiHocDTO baiHoc);
 
         void Remove(int? Id);
 

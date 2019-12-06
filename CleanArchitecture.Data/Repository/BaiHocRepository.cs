@@ -3,35 +3,57 @@ using System.Collections.Generic;
 using CleanArchitecture.Data.Context;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Data.Repository
 {
     public class BaiHocRepository : IBaiHocRepository
     {
+        private WebEnglishDBContext webEnglishDBContext;
+        
+        public BaiHocRepository(WebEnglishDBContext webEnglishDBContext)
+        {
+            this.webEnglishDBContext = webEnglishDBContext;
+        }
         public void Add(BaiHoc entity)
         {
-            throw new System.NotImplementedException();
+            if (entity.Id == 0)
+            {
+                webEnglishDBContext.BaiHoc.Add(entity);
+                webEnglishDBContext.SaveChanges();
+            }
+            else
+            {
+                BaiHoc findResults = webEnglishDBContext.BaiHoc.Find(entity.Id);
+                findResults.IdchuDe = entity.IdchuDe;
+                findResults.BaiSo = entity.BaiSo;
+                findResults.TenBaiHoc = entity.TenBaiHoc;
+                webEnglishDBContext.SaveChanges();
+            }
         }
 
         public void AddRange(IEnumerable<BaiHoc> entities)
         {
-            throw new System.NotImplementedException();
+            webEnglishDBContext.BaiHoc.AddRange(entities);
         }
 
         public IEnumerable<BaiHoc> GetAll()
         {
-            throw new System.NotImplementedException();
+            return webEnglishDBContext.BaiHoc.Include(g => g.IdchuDeNavigation);
         }
 
-        public BaiHoc GetBy(int id)
+
+        public BaiHoc GetBy(int? Id)
         {
-            throw new System.NotImplementedException();
+            BaiHoc findResults = webEnglishDBContext.BaiHoc.Find(Id);
+            return findResults;
         }
 
-        public void Remove(BaiHoc entity)
+        public void Remove(int? Id)
         {
-            throw new System.NotImplementedException();
+            ChuDe findResults = webEnglishDBContext.ChuDe.Find(Id);
+            webEnglishDBContext.ChuDe.Remove(findResults);
+            webEnglishDBContext.SaveChanges();
         }
-
     }
 }
