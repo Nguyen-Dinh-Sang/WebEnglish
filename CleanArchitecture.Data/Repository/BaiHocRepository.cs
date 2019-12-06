@@ -46,13 +46,14 @@ namespace CleanArchitecture.Data.Repository
         public BaiHoc GetBy(int? Id)
         {
             BaiHoc findResults = webEnglishDBContext.BaiHoc.Find(Id);
+            findResults.IdchuDeNavigation = webEnglishDBContext.ChuDe.Find(findResults.IdchuDe);
             return findResults;
         }
 
         public void Remove(int? Id)
         {
-            ChuDe findResults = webEnglishDBContext.ChuDe.Find(Id);
-            webEnglishDBContext.ChuDe.Remove(findResults);
+            BaiHoc findResults = webEnglishDBContext.BaiHoc.Find(Id);
+            webEnglishDBContext.BaiHoc.Remove(findResults);
             webEnglishDBContext.SaveChanges();
         }
     }

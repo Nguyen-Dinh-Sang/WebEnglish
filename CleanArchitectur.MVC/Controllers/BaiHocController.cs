@@ -41,5 +41,26 @@ namespace CleanArchitectur.MVC.Controllers
             }
             return View(baiHocDTO);
         }
+
+        [HttpGet]
+        public IActionResult Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var baiHoc = baiHocService.GetBaiHoc(Id);
+                return View(baiHoc);
+            }
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirm(int? Id)
+        {
+            baiHocService.Remove(Id);
+            return RedirectToAction("Index");
+        }
     }
 }

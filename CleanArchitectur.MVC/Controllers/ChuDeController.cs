@@ -11,10 +11,12 @@ namespace CleanArchitectur.MVC.Controllers
     public class ChuDeController : Controller
     {
         private IChuDeService chuDeService;
+        private IBaiHocService baiHocService;
 
-        public ChuDeController(IChuDeService chuDeService)
+        public ChuDeController(IChuDeService chuDeService, IBaiHocService baiHocService)
         {
             this.chuDeService = chuDeService;
+            this.baiHocService = baiHocService;
         }
         public IActionResult Index()
         {
@@ -100,6 +102,28 @@ namespace CleanArchitectur.MVC.Controllers
                 };
                 return View(chuDeViewDetails);
             }
+        }
+
+        [HttpGet]
+        public IActionResult DeleteBaiHoc(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var baiHoc = baiHocService.GetBaiHoc(Id);
+                return View(baiHoc);
+            }
+        }
+
+        [HttpPost, ActionName("DeleteBaiHoc")]
+        public IActionResult DeleteBaiHocConfirm(int? Id)
+        {
+            ChuDeDTO chuDe = chuDeService.GetChuDe(baiHocService.GetBaiHoc(Id).IdchuDe);
+            baiHocService.Remove(Id);
+            return RedirectToAction("Details", chuDe);
         }
     }
 }

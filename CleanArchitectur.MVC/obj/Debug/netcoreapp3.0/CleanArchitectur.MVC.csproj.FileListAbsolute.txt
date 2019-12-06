@@ -329,3 +329,5 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\C
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.dll
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.pdb
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\Create.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\Delete.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\DeleteBaiHoc.cshtml.g.cs
