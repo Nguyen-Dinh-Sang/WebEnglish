@@ -504,5 +504,7 @@ C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.csproj.CopyComplete
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.dll
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.pdb
-C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\Details1.cshtml.g.cs
-C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\Details2.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\CreateChiTietBaiHoc.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\CreateCauHoi.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Create1.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\EditBaiHoc.cshtml.g.cs

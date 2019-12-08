@@ -61,7 +61,11 @@ namespace CleanArchitecture.Data.Repository
             var baiKiemtra = from m in webEnglishDBContext.BaiKiemTra
                              where m.IdbaiHoc == Id
                              select m;
-            return baiKiemtra.First();
+            if(baiKiemtra.Count() > 0)
+            {
+                return baiKiemtra.First();
+            }
+            return null;
         }
 
         public ICollection<CauHoi> GetCauHoi(int? Id)
@@ -110,10 +114,10 @@ namespace CleanArchitecture.Data.Repository
             }
         }
 
-        public void AddCauHoi(IEnumerable<CauHoi> cauHoi)
+        public void AddCauHoi(CauHoi cauHoi)
         {
 
-            webEnglishDBContext.CauHoi.AddRange(cauHoi);
+            webEnglishDBContext.CauHoi.Add(cauHoi);
             webEnglishDBContext.SaveChanges();
         }
 
@@ -131,6 +135,16 @@ namespace CleanArchitecture.Data.Repository
                 findResults.GoiY = item.GoiY;
                 webEnglishDBContext.SaveChanges();
             }
+        }
+
+        public int GetIDBaiHoc()
+        {
+            return webEnglishDBContext.BaiHoc.Max(x => x.Id);
+        }
+
+        public int GetIDBaiKiemTra()
+        {
+            return webEnglishDBContext.BaiKiemTra.Max(x => x.Id);
         }
     }
 }

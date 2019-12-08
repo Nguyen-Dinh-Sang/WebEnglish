@@ -20,5 +20,15 @@ namespace CleanArchitecture.Application.Interfaces
         BaiKiemTraDTO GetBaiKiemTra(int? Id);
 
         IEnumerable<CauHoiDTO> GetCauHoi(int? Id);
+
+        int GetIDBaiHoc();
+
+        int GetIDBaiKiemTra();
+
+        void CreateChiTietBaiHoc(ChiTietBaiHocDTO chiTietBaiHoc);
+
+        void CreateBaiKiemTra(BaiKiemTraDTO baiKiemTra);
+
+        void CreateCauHoi(CauHoiDTO cauHoi);
     }
 }

@@ -125,5 +125,31 @@ namespace CleanArchitectur.MVC.Controllers
             baiHocService.Remove(Id);
             return RedirectToAction("Details", chuDe);
         }
+
+        [HttpGet]
+        public IActionResult EditBaiHoc(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var baiHoc = baiHocService.GetBaiHoc(Id);
+                return View(baiHoc);
+            }
+        }
+
+        [HttpPost, ActionName("EditBaiHoc")]
+        public IActionResult EditBaiHocConfirm(BaiHocDTO baiHoc)
+        {
+            if (ModelState.IsValid)
+            {
+                baiHocService.Create(baiHoc);
+                ChuDeDTO chuDe = chuDeService.GetChuDe(baiHoc.IdchuDe);
+                return RedirectToAction("Details",chuDe);
+            }
+            return View(baiHoc);
+        }
     }
 }

@@ -25,6 +25,21 @@ namespace CleanArchitecture.Application.Services
             baiHocRepository.Add(iMapper.Map<BaiHocDTO, BaiHoc>(baiHoc));
         }
 
+        public void CreateBaiKiemTra(BaiKiemTraDTO baiKiemTra)
+        {
+            baiHocRepository.AddBaiKiemTra(iMapper.Map<BaiKiemTraDTO, BaiKiemTra>(baiKiemTra));
+        }
+
+        public void CreateCauHoi(CauHoiDTO cauHoi)
+        {
+            baiHocRepository.AddCauHoi(iMapper.Map<CauHoiDTO, CauHoi>(cauHoi)); 
+        }
+
+        public void CreateChiTietBaiHoc(ChiTietBaiHocDTO chiTietBaiHoc)
+        {
+            baiHocRepository.AddChiTietBaiHoc(iMapper.Map<ChiTietBaiHocDTO, ChiTietBaiHoc>(chiTietBaiHoc));
+        }
+
         public BaiHocDTO GetBaiHoc(int? Id)
         {
             return iMapper.Map<BaiHoc, BaiHocDTO>(baiHocRepository.GetBy(Id));
@@ -53,6 +68,16 @@ namespace CleanArchitecture.Application.Services
         public ChiTietBaiHocDTO GetChiTiet(int? Id)
         {
             return iMapper.Map<ChiTietBaiHoc, ChiTietBaiHocDTO>(baiHocRepository.GetChiTietBaiHoc(Id));
+        }
+
+        public int GetIDBaiHoc()
+        {
+            return baiHocRepository.GetIDBaiHoc();
+        }
+
+        public int GetIDBaiKiemTra()
+        {
+            return baiHocRepository.GetIDBaiKiemTra();
         }
 
         public void Remove(int? Id)

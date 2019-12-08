@@ -85,29 +85,32 @@
             <tbody>
                 @foreach (var item in Model.cauHois)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CauHoi1)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DapAnA)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DapAnB)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DapAnC)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DapAnD)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DapAnDung)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.GoiY)
-                        </td>   
-                    </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CauHoi1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DapAnA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DapAnB)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DapAnC)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DapAnD)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DapAnDung)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GoiY)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    </td>
+                </tr>
                 }
             </tbody>
         </table>

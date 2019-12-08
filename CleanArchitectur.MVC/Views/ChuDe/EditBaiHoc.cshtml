@@ -1,0 +1,44 @@
+﻿@model CleanArchitecture.Application.ViewModels.BaiHocDTO
+@{
+    ViewData["Title"] = "EditBaiHoc";
+}
+
+<h1>EditBaiHoc</h1>
+
+<h4>Bài Học</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditBaiHoc">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="IdchuDe" />
+            <div class="form-group">
+                <label asp-for="BaiSo" class="control-label"></label>
+                <input asp-for="BaiSo" class="form-control" />
+                <span asp-validation-for="BaiSo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenBaiHoc" class="control-label"></label>
+                <input asp-for="TenBaiHoc" class="form-control" />
+                <span asp-validation-for="TenBaiHoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayTao" class="control-label"></label>
+                <input asp-for="NgayTao" class="form-control" />
+                <span asp-validation-for="NgayTao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-route-id="@Model.IdchuDe">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

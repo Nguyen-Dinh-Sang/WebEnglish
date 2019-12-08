@@ -13,8 +13,12 @@ namespace CleanArchitecture.Domain.Interfaces
 
         void AddChiTietBaiHoc(ChiTietBaiHoc chiTietBaiHoc);
         void AddBaiKiemTra(BaiKiemTra baiKiemTra);
-        void AddCauHoi(IEnumerable<CauHoi> cauHoi);
+        void AddCauHoi(CauHoi cauHoi);
 
         void UpdateCauHoi(IEnumerable<CauHoi> cauHoi);
+
+        int GetIDBaiHoc();
+
+        int GetIDBaiKiemTra();
     }
 }
