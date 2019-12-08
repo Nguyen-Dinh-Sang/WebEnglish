@@ -65,6 +65,11 @@ namespace CleanArchitecture.Application.Services
             return iMapper.Map<IEnumerable<CauHoi>, IEnumerable<CauHoiDTO>>(baiHocRepository.GetCauHoi(baiKiemTra.Id));
         }
 
+        public CauHoiDTO GetCauHoiEdit(int? Id)
+        {
+            return iMapper.Map<CauHoi,CauHoiDTO>(baiHocRepository.GetCauHoiEdit(Id));
+        }
+
         public ChiTietBaiHocDTO GetChiTiet(int? Id)
         {
             return iMapper.Map<ChiTietBaiHoc, ChiTietBaiHocDTO>(baiHocRepository.GetChiTietBaiHoc(Id));

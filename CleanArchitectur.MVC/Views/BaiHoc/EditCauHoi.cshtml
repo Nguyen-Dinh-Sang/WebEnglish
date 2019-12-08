@@ -1,17 +1,19 @@
 ﻿@model CleanArchitecture.Application.ViewModels.CauHoiDTO
 
 @{
-    ViewData["Title"] = "CreateCauHoi";
+    ViewData["Title"] = "EditCauHoi";
 }
 
-<h1>CreateCauHoi</h1>
+<h1>EditCauHoi</h1>
 
 <h4>CauHoi</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateCauHoi">
+        <form asp-action="EditCauHoi">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="IdbaiKiemTra" />
             <div class="form-group">
                 <label asp-for="CauHoi1" class="control-label"></label>
                 <input asp-for="CauHoi1" class="form-control" />
@@ -53,10 +55,14 @@
                 <span asp-validation-for="GoiY" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-route-id="@Model.IdbaiKiemTraNavigation.IdbaiHoc">Back to List</a>
 </div>
 
 @section Scripts {

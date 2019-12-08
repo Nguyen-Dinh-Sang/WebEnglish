@@ -116,27 +116,23 @@ namespace CleanArchitecture.Data.Repository
 
         public void AddCauHoi(CauHoi cauHoi)
         {
-
-            webEnglishDBContext.CauHoi.Add(cauHoi);
-            webEnglishDBContext.SaveChanges();
-        }
-
-        public void UpdateCauHoi(IEnumerable<CauHoi> cauHoi)
-        {
-            foreach (var item in cauHoi)
+            if(cauHoi.Id == 0)
             {
-                CauHoi findResults = webEnglishDBContext.CauHoi.Find(item.Id);
-                findResults.CauHoi1 = item.CauHoi1;
-                findResults.DapAnA = item.DapAnA;
-                findResults.DapAnB = item.DapAnB;
-                findResults.DapAnC = item.DapAnC;
-                findResults.DapAnD = item.DapAnD;
-                findResults.DapAnDung = item.DapAnDung;
-                findResults.GoiY = item.GoiY;
+                webEnglishDBContext.CauHoi.Add(cauHoi);
                 webEnglishDBContext.SaveChanges();
-            }
+            } else
+            {
+                CauHoi findResults = webEnglishDBContext.CauHoi.Find(cauHoi.Id);
+                findResults.CauHoi1 = cauHoi.CauHoi1;
+                findResults.DapAnA = cauHoi.DapAnA;
+                findResults.DapAnB = cauHoi.DapAnB;
+                findResults.DapAnC = cauHoi.DapAnC;
+                findResults.DapAnD = cauHoi.DapAnD;
+                findResults.DapAnDung = cauHoi.DapAnDung;
+                findResults.GoiY = cauHoi.GoiY;
+                webEnglishDBContext.SaveChanges();
+            }   
         }
-
         public int GetIDBaiHoc()
         {
             return webEnglishDBContext.BaiHoc.Max(x => x.Id);
@@ -145,6 +141,13 @@ namespace CleanArchitecture.Data.Repository
         public int GetIDBaiKiemTra()
         {
             return webEnglishDBContext.BaiKiemTra.Max(x => x.Id);
+        }
+
+        public CauHoi GetCauHoiEdit(int? Id)
+        {
+            var cauHoi = webEnglishDBContext.CauHoi.Find(Id);
+            cauHoi.IdbaiKiemTraNavigation = webEnglishDBContext.BaiKiemTra.Find(cauHoi.IdbaiKiemTra);
+            return cauHoi;
         }
     }
 }

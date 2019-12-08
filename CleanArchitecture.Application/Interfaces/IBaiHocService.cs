@@ -30,5 +30,7 @@ namespace CleanArchitecture.Application.Interfaces
         void CreateBaiKiemTra(BaiKiemTraDTO baiKiemTra);
 
         void CreateCauHoi(CauHoiDTO cauHoi);
+
+        CauHoiDTO GetCauHoiEdit(int? Id);
     }
 }

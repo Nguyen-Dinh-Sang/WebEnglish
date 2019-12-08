@@ -135,5 +135,32 @@ namespace CleanArchitectur.MVC.Controllers
                 return View(baiHocViewDetails);
             }
         }
+
+        //Edit Câu Hỏi
+        [HttpGet]
+        public IActionResult EditCauHoi(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var cauHoi = baiHocService.GetCauHoiEdit(Id);
+                return View(cauHoi);
+            }
+        }
+
+        [HttpPost, ActionName("EditCauHoi")]
+        public IActionResult EditCauHoiConfirm(CauHoiDTO cauHoi)
+        {
+            if (ModelState.IsValid)
+            {
+                baiHocService.CreateCauHoi(cauHoi);
+                var baiHoc = baiHocService.GetBaiHoc(baiHocService.GetBaiKiemTra(cauHoi.IdbaiKiemTra).IdbaiHoc);
+                return RedirectToAction("Details",baiHoc);
+            }
+            return View(cauHoi);
+        }
     }
 }

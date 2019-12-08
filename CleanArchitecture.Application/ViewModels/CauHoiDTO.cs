@@ -17,5 +17,7 @@ namespace CleanArchitecture.Application.ViewModels
         public string DapAnD { get; set; }
         public string DapAnDung { get; set; }
         public string GoiY { get; set; }
+
+        public virtual BaiKiemTraDTO IdbaiKiemTraNavigation { get; set; }
     }
 }
