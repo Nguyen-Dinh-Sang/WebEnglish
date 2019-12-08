@@ -20,8 +20,14 @@ namespace CleanArchitecture.Application.Mapping
             CreateMap<BaiHoc, BaiHocDTO>();
             CreateMap<BaiHocDTO, BaiHoc>();
 
-            CreateMap<BaiHoc, BaiHocDTO>();
-            CreateMap<BaiHocDTO, BaiHoc>();
+            CreateMap<ChiTietBaiHoc, ChiTietBaiHocDTO>();
+            CreateMap<ChiTietBaiHocDTO, ChiTietBaiHoc>();
+
+            CreateMap<BaiKiemTra, BaiKiemTraDTO>();
+            CreateMap<BaiKiemTraDTO, BaiKiemTra>();
+
+            CreateMap<CauHoi, CauHoiDTO>();
+            CreateMap<CauHoiDTO, CauHoi>();
         }
     }
 }

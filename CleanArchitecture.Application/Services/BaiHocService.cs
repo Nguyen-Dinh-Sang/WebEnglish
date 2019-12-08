@@ -35,14 +35,24 @@ namespace CleanArchitecture.Application.Services
             return iMapper.Map<IEnumerable<BaiHoc>, IEnumerable<BaiHocDTO>>(baiHocRepository.GetAll());
         }
 
-        public ICollection<BaiKiemTraDTO> GetBaiKiemTra(int? Id)
+        public BaiKiemTraDTO GetBaiKiemTra(int? Id)
         {
-            throw new NotImplementedException();
+            return iMapper.Map<BaiKiemTra, BaiKiemTraDTO>(baiHocRepository.GetBaiKiemTra(Id));
         }
 
-        public ICollection<ChiTietBaiHocDTO> GetChiTiet(int? Id)
+        public IEnumerable<CauHoiDTO> GetCauHoi(int? Id)
         {
-            throw new NotImplementedException();
+            var baiKiemTra = GetBaiKiemTra(Id);
+            if (baiKiemTra == null)
+            {
+                return null;
+            }
+            return iMapper.Map<IEnumerable<CauHoi>, IEnumerable<CauHoiDTO>>(baiHocRepository.GetCauHoi(baiKiemTra.Id));
+        }
+
+        public ChiTietBaiHocDTO GetChiTiet(int? Id)
+        {
+            return iMapper.Map<ChiTietBaiHoc, ChiTietBaiHocDTO>(baiHocRepository.GetChiTietBaiHoc(Id));
         }
 
         public void Remove(int? Id)

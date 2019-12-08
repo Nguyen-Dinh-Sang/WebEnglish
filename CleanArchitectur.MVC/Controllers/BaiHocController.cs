@@ -62,5 +62,25 @@ namespace CleanArchitectur.MVC.Controllers
             baiHocService.Remove(Id);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Details(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var baiHocViewDetails = new BaiHocViewDetails()
+                {
+                    baiHoc = baiHocService.GetBaiHoc(Id),
+                    chiTietBaiHoc = baiHocService.GetChiTiet(Id),
+                    cauHois = baiHocService.GetCauHoi(Id)
+                };
+
+                var baiHoc = baiHocService.GetBaiHoc(Id);
+                return View(baiHocViewDetails);
+            }
+        }
     }
 }

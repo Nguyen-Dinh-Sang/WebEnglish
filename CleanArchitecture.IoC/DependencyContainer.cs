@@ -32,6 +32,8 @@ namespace CleanArchitecture.IoC
 
             services.AddScoped<IBaiHocService, BaiHocService>();
             services.AddScoped<IBaiHocRepository, BaiHocRepository>();
+
+
         }
     }
 }

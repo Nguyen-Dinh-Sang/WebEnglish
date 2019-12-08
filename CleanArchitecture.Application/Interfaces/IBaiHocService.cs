@@ -15,8 +15,10 @@ namespace CleanArchitecture.Application.Interfaces
 
         void Remove(int? Id);
 
-        ICollection<ChiTietBaiHocDTO> GetChiTiet(int? Id);
+        ChiTietBaiHocDTO GetChiTiet(int? Id);
 
-        ICollection<BaiKiemTraDTO> GetBaiKiemTra(int? Id);
+        BaiKiemTraDTO GetBaiKiemTra(int? Id);
+
+        IEnumerable<CauHoiDTO> GetCauHoi(int? Id);
     }
 }

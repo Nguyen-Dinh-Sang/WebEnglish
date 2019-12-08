@@ -8602,11 +8602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
       "projectName": "CleanArchitectur.MVC",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitectur.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8625,8 +8625,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
+            "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
             }
           }
         }
@@ -8679,6 +8679,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8687,7 +8705,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
