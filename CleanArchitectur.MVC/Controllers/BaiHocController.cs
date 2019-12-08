@@ -162,5 +162,59 @@ namespace CleanArchitectur.MVC.Controllers
             }
             return View(cauHoi);
         }
+        
+        //Edit chi tiết bài học
+        [HttpGet]
+        public IActionResult EditChiTietBaiHoc(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                var chiTietBaiHoc = baiHocService.GetChiTiet(Id);
+                return View(chiTietBaiHoc);
+            }
+        }
+
+        [HttpPost, ActionName("EditChiTietBaiHoc")]
+        public IActionResult EditChiTietBaiHocConfirm(ChiTietBaiHocDTO chiTietBaiHoc)
+        {
+            if (ModelState.IsValid)
+            {
+                baiHocService.CreateChiTietBaiHoc(chiTietBaiHoc);
+                var baiHoc = baiHocService.GetBaiHoc(chiTietBaiHoc.IdbaiHoc);
+                return RedirectToAction("Details", baiHoc);
+            }
+            return View(chiTietBaiHoc);
+        }
+
+        //Edit bài học
+        [HttpGet]
+        public IActionResult Edit(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                ViewBag.ChuDe = ChuDeService.GetChuDes();
+                var baiHoc = baiHocService.GetBaiHoc(Id);
+                return View(baiHoc);
+            }
+        }
+
+        [HttpPost, ActionName("Edit")]
+        public IActionResult EditConfirm(BaiHocDTO baiHoc)
+        {
+            if (ModelState.IsValid)
+            {
+                baiHocService.Create(baiHoc);
+                return RedirectToAction("Index");
+            }
+            return View(baiHoc);
+        }
     }
 }

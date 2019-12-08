@@ -509,3 +509,5 @@ C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Create1.cshtml.g.cs
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\EditBaiHoc.cshtml.g.cs
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\EditCauHoi.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\EditChiTietBaiHoc.cshtml.g.cs
+C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\Edit.cshtml.g.cs

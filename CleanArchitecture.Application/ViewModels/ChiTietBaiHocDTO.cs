@@ -13,5 +13,7 @@ namespace CleanArchitecture.Application.ViewModels
         public string NoiDung { get; set; }
         public string LinkMp3 { get; set; }
         public string GhiChu { get; set; }
+
+        public virtual BaiHocDTO IdbaiHocNavigation { get; set; }
     }
 }
