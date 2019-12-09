@@ -1,7 +1,7 @@
 ﻿@model CleanArchitecture.Application.ViewModels.ChiTietBaiHocDTO
 
 @{
-    ViewData["Title"] = "EditChiTietBaiHoc";
+    ViewData["Title"] = "BaiHoc";
 }
 
 <h1>Edit</h1>
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="LinkMp3" class="control-label"></label>
-                <input asp-for="LinkMp3" class="form-control" />
+                <input type="file" asp-for="LinkMp3" accept=".mp3">
                 <span asp-validation-for="LinkMp3" class="text-danger"></span>
             </div>
             <div class="form-group">
