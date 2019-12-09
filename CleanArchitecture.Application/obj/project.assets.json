@@ -854,11 +854,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
       "projectName": "CleanArchitecture.Application",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.Application\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -877,8 +877,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\WEB\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
+            "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
             }
           }
         }

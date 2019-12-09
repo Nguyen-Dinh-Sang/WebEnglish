@@ -10,14 +10,32 @@ namespace CleanArchitecture.Application.ViewModels
         [Key]
         public int Id { get; set; }
         public int? IdbaiKiemTra { get; set; }
-        public string CauHoi1 { get; set; }
-        public string DapAnA { get; set; }
-        public string DapAnB { get; set; }
-        public string DapAnC { get; set; }
-        public string DapAnD { get; set; }
-        public string DapAnDung { get; set; }
-        public string GoiY { get; set; }
 
+        [Display(Name = "Câu Hỏi")]
+        [Required(ErrorMessage = "Câu Hỏi Không Được Để Trống")]
+        public string CauHoi1 { get; set; }
+
+        [Display(Name = "Đáp Án A")]
+        [Required(ErrorMessage = "Đáp Án A Không Được Để Trống")]
+        public string DapAnA { get; set; }
+
+        [Display(Name = "Đáp Án B")]
+        [Required(ErrorMessage = "Đáp Án B Không Được Để Trống")]
+        public string DapAnB { get; set; }
+
+        [Display(Name = "Đáp Án C")]
+        [Required(ErrorMessage = "Đáp Án C Không Được Để Trống")]
+        public string DapAnC { get; set; }
+
+        [Display(Name = "Đáp Án D")]
+        [Required(ErrorMessage = "Đáp Án D Không Được Để Trống")]
+        public string DapAnD { get; set; }
+
+        [Display(Name = "Đáp Án Đúng")]
+        public string DapAnDung { get; set; }
+
+        [Display(Name = "Gợi Ý")]
+        public string GoiY { get; set; }
         public virtual BaiKiemTraDTO IdbaiKiemTraNavigation { get; set; }
     }
 }

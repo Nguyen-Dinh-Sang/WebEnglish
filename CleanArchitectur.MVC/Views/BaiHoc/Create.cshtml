@@ -12,10 +12,10 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BaiSo" value="0" />
             <div class="form-group">
                 <label asp-for="IdchuDe" class="control-label"></label>
                 <select asp-for="IdchuDe" class="form-control" asp-items="@(new SelectList(ViewBag.ChuDe,"Id","TenChuDe"))">
-
                 </select>
             </div>
             <div class="form-group">

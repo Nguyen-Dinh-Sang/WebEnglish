@@ -10,14 +10,13 @@ namespace CleanArchitecture.Application.ViewModels
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "Họ Tên Người Dùng")]
+        [Display(Name = "Người Dùng")]
         public string TenNguoiDung { get; set; }
 
         [Display(Name = "Tài Khoản")]
         public string TaiKhoan { get; set; }
 
         [Display(Name = "Mật Khẩu")]
-        [Required(ErrorMessage = "Mật Khẩu Không Được Để Trống")]
         public string MatKhau { get; set; }
 
         [Display(Name = "Ngày Tạo")]
