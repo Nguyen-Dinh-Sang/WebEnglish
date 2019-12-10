@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
@@ -14,10 +16,12 @@ namespace CleanArchitectur.MVC.Controllers
         private IChuDeService ChuDeService;
         private static int SoCauHoi = 0;
 
-        public BaiHocController(IBaiHocService baiHocService, IChuDeService chuDeService)
+        [Obsolete]
+        public BaiHocController(IBaiHocService baiHocService, IChuDeService chuDeService, IHostingEnvironment environment)
         {
             this.baiHocService = baiHocService;
             this.ChuDeService = chuDeService;
+            hostingEnvironment = environment;
         }
         public IActionResult Index()
         {
@@ -46,17 +50,23 @@ namespace CleanArchitectur.MVC.Controllers
         [HttpGet]
         public IActionResult CreateChiTietBaiHoc()
         {
-            return View();
+            return View(new BaiHocUpload());
         }
 
         [HttpPost]
-        public IActionResult CreateChiTietBaiHoc(ChiTietBaiHocDTO chiTietBaiHoc)
+        public IActionResult CreateChiTietBaiHoc(BaiHocUpload model)
         {
-            if (ModelState.IsValid)
+            if (model.MyMp3 != null)
             {
-                chiTietBaiHoc.Id = 0;
-                chiTietBaiHoc.IdbaiHoc = baiHocService.GetIDBaiHoc();
-                baiHocService.CreateChiTietBaiHoc(chiTietBaiHoc);
+                var uniqueFileName = GetUniqueFileName(model.MyMp3.FileName);
+                var uploads = Path.Combine(hostingEnvironment.WebRootPath, "mp32");
+                var filePath = Path.Combine(uploads, uniqueFileName);
+                model.MyMp3.CopyTo(new FileStream(filePath, FileMode.Create));
+
+                model.BaiHoc.Id = 0;
+                model.BaiHoc.IdbaiHoc = baiHocService.GetIDBaiHoc();
+                model.BaiHoc.LinkMp3 = uniqueFileName;
+                baiHocService.CreateChiTietBaiHoc(model.BaiHoc);
                 BaiKiemTraDTO baiKiemTra = new BaiKiemTraDTO()
                 {
                     Id = 0,
@@ -65,7 +75,7 @@ namespace CleanArchitectur.MVC.Controllers
                 baiHocService.CreateBaiKiemTra(baiKiemTra);
                 return RedirectToAction("CreateCauHoi");
             }
-            return View(chiTietBaiHoc);
+            return View(model);
         }
 
         [HttpGet]
@@ -174,17 +184,30 @@ namespace CleanArchitectur.MVC.Controllers
             else
             {
                 var chiTietBaiHoc = baiHocService.GetChiTiet(Id);
-                return View(chiTietBaiHoc);
+                BaiHocUpload baiHocUpload = new BaiHocUpload()
+                {
+                    BaiHoc = baiHocService.GetChiTiet(Id),
+                };
+                return View(baiHocUpload);
             }
         }
 
         [HttpPost, ActionName("EditChiTietBaiHoc")]
-        public IActionResult EditChiTietBaiHocConfirm(ChiTietBaiHocDTO chiTietBaiHoc)
+        public IActionResult EditChiTietBaiHocConfirm(BaiHocUpload chiTietBaiHoc)
         {
             if (ModelState.IsValid)
             {
-                baiHocService.CreateChiTietBaiHoc(chiTietBaiHoc);
-                var baiHoc = baiHocService.GetBaiHoc(chiTietBaiHoc.IdbaiHoc);
+                if (chiTietBaiHoc.MyMp3 != null)
+                {
+                    var uniqueFileName = GetUniqueFileName(chiTietBaiHoc.MyMp3.FileName);
+                    var uploads = Path.Combine(hostingEnvironment.WebRootPath, "mp32");
+                    var filePath = Path.Combine(uploads, uniqueFileName);
+                    chiTietBaiHoc.MyMp3.CopyTo(new FileStream(filePath, FileMode.Create));
+                    chiTietBaiHoc.BaiHoc.LinkMp3 = uniqueFileName;
+                    baiHocService.CreateChiTietBaiHoc(chiTietBaiHoc.BaiHoc);
+                }
+                baiHocService.CreateChiTietBaiHoc(chiTietBaiHoc.BaiHoc);
+                var baiHoc = baiHocService.GetBaiHoc(chiTietBaiHoc.BaiHoc.IdbaiHoc);
                 return RedirectToAction("Details", baiHoc);
             }
             return View(chiTietBaiHoc);
@@ -215,6 +238,19 @@ namespace CleanArchitectur.MVC.Controllers
                 return RedirectToAction("Index");
             }
             return View(baiHoc);
+        }
+
+
+        [Obsolete]
+        private readonly IHostingEnvironment hostingEnvironment;
+
+        private string GetUniqueFileName(string fileName)
+        {
+            fileName = Path.GetFileName(fileName);
+            return Path.GetFileNameWithoutExtension(fileName)
+                      + "_"
+                      + Guid.NewGuid().ToString().Substring(0, 4)
+                      + Path.GetExtension(fileName);
         }
     }
 }

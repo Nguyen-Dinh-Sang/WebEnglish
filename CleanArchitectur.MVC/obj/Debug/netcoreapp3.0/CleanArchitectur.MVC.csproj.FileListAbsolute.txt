@@ -516,3 +516,6 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\R
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\BaiHoc\EditChiTietBaiHoc.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\EditBaiHoc.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Edit.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\System.IO.Pipelines.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll

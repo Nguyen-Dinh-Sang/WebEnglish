@@ -5,6 +5,13 @@
     <UserSecretsId>aspnet-CleanArchitectur.MVC-4F2E4036-9C60-47AD-921B-57C88BC62112</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="wwwroot\mp3\**" />
+    <Content Remove="wwwroot\mp3\**" />
+    <EmbeddedResource Remove="wwwroot\mp3\**" />
+    <None Remove="wwwroot\mp3\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0" />
@@ -23,7 +30,7 @@
 
 
   <ItemGroup>
-    <Folder Include="wwwroot\mp3\" />
+    <Folder Include="wwwroot\mp32\" />
   </ItemGroup>
 
 </Project>

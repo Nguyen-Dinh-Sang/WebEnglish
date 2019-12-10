@@ -1,38 +1,42 @@
-﻿@model CleanArchitecture.Application.ViewModels.ChiTietBaiHocDTO
+﻿@model CleanArchitecture.Application.ViewModels.BaiHocUpload
 
 @{
-    ViewData["Title"] = "BaiHoc";
+    ViewData["Title"] = "Create";
 }
 
 <h1>Create</h1>
 
 <h4>Chi Tiết Bài Học</h4>
-
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateChiTietBaiHoc">
+        <form asp-action="CreateBaiHocVip" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BaiHoc.LinkMp3" value="Link" />
             <div class="form-group">
-                <label asp-for="NoiDung" class="control-label"></label>
-                <input asp-for="NoiDung" class="form-control" />
-                <span asp-validation-for="NoiDung" class="text-danger"></span>
+                <label asp-for="BaiHoc.NoiDung" class="control-label"></label>
+                <input asp-for="BaiHoc.NoiDung" class="form-control" />
+                <span asp-validation-for="BaiHoc.NoiDung" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LinkMp3" class="control-label"></label>
-                <input asp-for="LinkMp3" class="form-control" />
-                <span asp-validation-for="LinkMp3" class="text-danger"></span>
+                <label asp-for="BaiHoc.GhiChu" class="control-label"></label>
+                <input asp-for="BaiHoc.GhiChu" class="form-control" />
+                <span asp-validation-for="BaiHoc.GhiChu" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GhiChu" class="control-label"></label>
-                <input asp-for="GhiChu" class="form-control" />
-                <span asp-validation-for="GhiChu" class="text-danger"></span>
+                <label asp-for="MyMp3" class="control-label">Link Mp3</label>
+                <input asp-for="MyMp3" class="form-control" required title="Link Mp3 Bài Học Không Được Để Trống"/>
+                <span asp-validation-for="MyMp3" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
