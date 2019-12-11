@@ -55,3 +55,15 @@
         }
     </tbody>
 </table>
+@{
+    double totalPages = ViewBag.TotalPages;
+
+    for (int i = 1; i <= totalPages; i++)
+    {
+        <div class="pagination" style="float:left">
+
+            @Html.ActionLink(i.ToString(), "Index", new { dataTimKiem = ViewBag.dataTimKiem, loaiTimKiem = ViewBag.loaiTimKiem, PageNumber = i })
+
+        </div>
+    }
+}

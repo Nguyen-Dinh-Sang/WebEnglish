@@ -19,18 +19,38 @@ namespace CleanArchitectur.MVC.Controllers
             this.chuDeService = chuDeService;
             this.baiHocService = baiHocService;
         }
-        public IActionResult Index(string dataTimKiem,string loaiTimKiem)
+        public IActionResult Index(string dataTimKiem,string loaiTimKiem,int PageNumber=1)
         {
             ViewBag.Name = HttpContext.Session.GetString("Ten");
             if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
             {
                 if (dataTimKiem == null)
                 {
-                    return View(chuDeService.GetChuDes());
+                    var model = chuDeService.GetChuDes();
+                    ViewBag.TotalPages = Math.Ceiling(model.Count() / 5.0);
+                    ViewBag.dataTimKiem = dataTimKiem;
+                    ViewBag.loaiTimKiem = loaiTimKiem;
+                    var chude = model.Skip((PageNumber - 1) * 5).Take(5).ToList();
+                    return View(chude);
+                  
                 }
                 else
                 {
-                    return View(chuDeService.GetSearchTenChuDe(dataTimKiem, loaiTimKiem));
+                    var model = chuDeService.GetSearchTenChuDe(dataTimKiem, loaiTimKiem);
+                    ViewBag.TotalPages = Math.Ceiling(model.Count() / 5.0);
+                    ViewBag.dataTimKiem = dataTimKiem;
+                    ViewBag.loaiTimKiem = loaiTimKiem;
+                    if (Math.Ceiling(model.Count() / 5.0) <= PageNumber - 1)
+                    {
+                        var chude = model.Skip((1 - 1) * 5).Take(5).ToList();
+                        return View(chude);
+                    }
+                    else
+                    {
+                        var chude = model.Skip((PageNumber - 1) * 5).Take(5).ToList();
+                        return View(chude);
+                    }
+                    
                 }
                 
                 

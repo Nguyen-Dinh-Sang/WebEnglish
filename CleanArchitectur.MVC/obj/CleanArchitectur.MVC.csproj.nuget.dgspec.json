@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj": {}
+    "E:\\git\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj": {
+    "E:\\git\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
+        "projectUniqueName": "E:\\git\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
         "projectName": "CleanArchitectur.MVC",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\obj\\",
+        "projectPath": "E:\\git\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\git\\WebEnglish\\CleanArchitectur.MVC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
+              "E:\\git\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
+                "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
               }
             }
           }
@@ -122,20 +119,17 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
+    "E:\\git\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
+        "projectUniqueName": "E:\\git\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
         "projectName": "CleanArchitecture.Application",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\obj\\",
+        "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\git\\WebEnglish\\CleanArchitecture.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,8 +142,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
+              "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+                "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
               }
             }
           }
@@ -205,20 +199,17 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
+    "E:\\git\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
+        "projectUniqueName": "E:\\git\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
         "projectName": "CleanArchitecture.Data",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\obj\\",
+        "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\git\\WebEnglish\\CleanArchitecture.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -231,8 +222,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
+              "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+                "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj"
               }
             }
           }
@@ -304,20 +295,17 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
+    "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+        "projectUniqueName": "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
         "projectName": "CleanArchitecture.Domain",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Domain\\obj\\",
+        "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\CleanArchitecture.Domain.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\git\\WebEnglish\\CleanArchitecture.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -373,20 +361,17 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
+    "E:\\git\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
+        "projectUniqueName": "E:\\git\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
         "projectName": "CleanArchitecture.IoC",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\obj\\",
+        "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\git\\WebEnglish\\CleanArchitecture.IoC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -399,11 +384,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj"
+              "E:\\git\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
+                "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj"
               },
-              "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj"
+              "E:\\git\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj": {
+                "projectPath": "E:\\git\\WebEnglish\\CleanArchitecture.Data\\CleanArchitecture.Data.csproj"
               }
             }
           }

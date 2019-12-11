@@ -24,20 +24,39 @@ namespace CleanArchitectur.MVC.Controllers
             this.ChuDeService = chuDeService;
             hostingEnvironment = environment;
         }
-        public IActionResult Index(string dataTimKiem, string loaiTimKiem)
+        public IActionResult Index(string dataTimKiem, string loaiTimKiem, int PageNumber = 1)
         {   
             if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
             {
                 ViewBag.Name = HttpContext.Session.GetString("Ten");
                 if (dataTimKiem == null)
                 {
-                  
-                    return View(baiHocService.GetBaiHocs());
+                    var model = baiHocService.GetBaiHocs();
+                    ViewBag.TotalPages = Math.Ceiling(model.Count() / 5.0);
+                    ViewBag.dataTimKiem = dataTimKiem;
+                    ViewBag.loaiTimKiem = loaiTimKiem;
+                    var baihoc = model.Skip((PageNumber - 1) * 5).Take(5).ToList();
+                    return View(baihoc);
+                    
                 }
                 else
                 {
-                   
-                    return View(baiHocService.GetBaiHocTheoTen(dataTimKiem, loaiTimKiem));
+                    var model = baiHocService.GetBaiHocTheoTen(dataTimKiem, loaiTimKiem);
+                    ViewBag.TotalPages = Math.Ceiling(model.Count() / 5.0);
+                    ViewBag.dataTimKiem = dataTimKiem;
+                    ViewBag.loaiTimKiem = loaiTimKiem;
+                    if (Math.Ceiling(model.Count() / 5.0) <= PageNumber-1)
+                    {
+                        var baihoc = model.Skip((1 - 1) * 5).Take(5).ToList();
+                        return View(baihoc);
+                    }
+                    else
+                    {
+                        var baihoc = model.Skip((PageNumber - 1) * 5).Take(5).ToList();
+                        return View(baihoc);
+                    }
+
+                    
                 }
                 
                

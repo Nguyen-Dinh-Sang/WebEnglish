@@ -35,7 +35,23 @@ namespace CleanArchitectur.MVC.Controllers
                 }
                 else
                 {
-                    return View(iNguoiDungService.GetSearchTenNguoiDung(dataTimKiem, loaiTimKiem));
+                    
+                    var model = iNguoiDungService.GetSearchTenNguoiDung(dataTimKiem, loaiTimKiem);
+                    ViewBag.TotalPages = Math.Ceiling(model.Count() / 5.0);
+                    ViewBag.dataTimKiem = dataTimKiem;
+                    ViewBag.loaiTimKiem = loaiTimKiem;
+                    if(Math.Ceiling(model.Count()/5.0)<=PageNumber-1)
+                    {
+                        var user = model.Skip((1 - 1) * 5).Take(5).ToList();
+                        return View(user);
+                    }
+                    else
+                    {
+                        var user = model.Skip((PageNumber - 1) * 5).Take(5).ToList();
+                        return View(user);
+                    }
+                    
+                    
                 }
                 
             }
