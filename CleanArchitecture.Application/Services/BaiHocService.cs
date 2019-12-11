@@ -14,6 +14,11 @@ namespace CleanArchitecture.Application.Services
         private readonly IBaiHocRepository baiHocRepository;
         private readonly IMapper iMapper;
 
+        public IEnumerable<BaiHocDTO> GetBaiHocTheoTen(string dataTimKiem, string loaiTimKiem)
+        {
+
+            return iMapper.Map<IEnumerable<BaiHoc>, IEnumerable<BaiHocDTO>>(baiHocRepository.Getbaihoc(dataTimKiem, loaiTimKiem));
+        }
         public BaiHocService(IBaiHocRepository baiHocRepository, IMapper mapper)
         {
             this.baiHocRepository = baiHocRepository;

@@ -7,6 +7,7 @@ namespace CleanArchitecture.Application.Interfaces
 {
     public interface IBaiHocService
     {
+        IEnumerable<BaiHocDTO> GetBaiHocTheoTen(string dataTimKiem, string loaiTimKiem);
         IEnumerable<BaiHocDTO> GetBaiHocs();
 
         BaiHocDTO GetBaiHoc(int? Id);

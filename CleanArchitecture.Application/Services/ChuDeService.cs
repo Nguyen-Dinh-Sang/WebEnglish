@@ -13,7 +13,10 @@ namespace CleanArchitecture.Application.Services
     {
         private readonly IChuDeRepository chuDeRepository;
         private readonly IMapper iMapper;
-
+        public IEnumerable<ChuDeDTO> GetSearchTenChuDe(string dataTimKiem, string loaiTimKiem)
+        {
+            return iMapper.Map<IEnumerable<ChuDe>, IEnumerable<ChuDeDTO>>(chuDeRepository.GetSearchTenChuDe(dataTimKiem, loaiTimKiem));
+        }
         public ChuDeService(IChuDeRepository chuDeRepository, IMapper mapper)
         {
             this.chuDeRepository = chuDeRepository;

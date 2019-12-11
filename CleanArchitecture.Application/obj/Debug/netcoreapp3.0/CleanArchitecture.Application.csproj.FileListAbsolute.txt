@@ -31,3 +31,14 @@ C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Application\obj\Debug\ne
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.csproj.CopyComplete
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.dll
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.pdb
+E:\git\WebEnglish\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Application.deps.json
+E:\git\WebEnglish\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Application.dll
+E:\git\WebEnglish\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Application.pdb
+E:\git\WebEnglish\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
+E:\git\WebEnglish\CleanArchitecture.Application\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
+E:\git\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.csprojAssemblyReference.cache
+E:\git\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+E:\git\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.AssemblyInfo.cs
+E:\git\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.csproj.CopyComplete
+E:\git\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.dll
+E:\git\WebEnglish\CleanArchitecture.Application\obj\Debug\netcoreapp3.0\CleanArchitecture.Application.pdb

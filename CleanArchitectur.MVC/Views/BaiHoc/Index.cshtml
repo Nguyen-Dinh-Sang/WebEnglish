@@ -5,7 +5,16 @@
 }
 
 <h1>Bài Học</h1>
-
+@using (Html.BeginForm())
+{
+    <p>
+        <select name="loaiTimKiem">
+            <option value="tenbaihoc">Tên bài học</option>
+            <option value="tenchude">Tên chủ đề</option>
+        </select>
+        Title: @Html.TextBox("dataTimKiem") <input type="submit" value="Tìm kiếm" />
+    </p>
+}
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -25,23 +34,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenBaiHoc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayTao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdchuDeNavigation.TenChuDe)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenBaiHoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdchuDeNavigation.TenChuDe)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

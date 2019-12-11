@@ -10,7 +10,7 @@ namespace CleanArchitecture.Domain.Interfaces
         IEnumerable<ChuDe> GetChuDes();
 
         ChuDe GetChuDe(int? Id);
-
+        ICollection<ChuDe> GetSearchTenChuDe(string dataTimKiem, string loaiTimKiem);
         void Create(ChuDe chuDe);
 
         void Remove(int? Id);

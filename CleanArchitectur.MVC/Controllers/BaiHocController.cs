@@ -24,14 +24,26 @@ namespace CleanArchitectur.MVC.Controllers
             this.ChuDeService = chuDeService;
             hostingEnvironment = environment;
         }
-        public IActionResult Index()
-        {
+        public IActionResult Index(string dataTimKiem, string loaiTimKiem)
+        {   
             if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
             {
                 ViewBag.Name = HttpContext.Session.GetString("Ten");
-                return View(baiHocService.GetBaiHocs());
+                if (dataTimKiem == null)
+                {
+                  
+                    return View(baiHocService.GetBaiHocs());
+                }
+                else
+                {
+                   
+                    return View(baiHocService.GetBaiHocTheoTen(dataTimKiem, loaiTimKiem));
+                }
+                
+               
             }
             return Redirect(@"~/NguoiDung/Login");
+            
         }
 
         [HttpGet]

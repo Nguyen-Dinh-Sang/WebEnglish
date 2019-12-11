@@ -5,6 +5,18 @@
 }
 
 <h1>Người Dùng</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        <select name="loaiTimKiem">
+
+            <option value="tennguoidung">Tên Người Dùng</option>
+            <option value="tentaikhoan">Tên Tài Khoản</option>
+
+        </select>
+        Title: @Html.TextBox("dataTimKiem") <input type="submit" value="Tìm kiếm" />
+    </p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -33,33 +45,34 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenNguoiDung)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TaiKhoan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MatKhau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayTao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoDienThoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VaiTro)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaiKhoan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VaiTro)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

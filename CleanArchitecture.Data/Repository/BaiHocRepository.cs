@@ -4,13 +4,34 @@ using CleanArchitecture.Data.Context;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace CleanArchitecture.Data.Repository
 {
     public class BaiHocRepository : IBaiHocRepository
     {
         private WebEnglishDBContext webEnglishDBContext;
-        
+
+        public ICollection<BaiHoc> Getbaihoc(string dataTimKiem, string loaiTimKiem)
+        {
+            var baiHoc = from m in webEnglishDBContext.BaiHoc.Include(g => g.IdchuDeNavigation)
+                         select m;
+            if (!String.IsNullOrEmpty(dataTimKiem) && loaiTimKiem == "tenbaihoc")
+            {
+                baiHoc = baiHoc.Where(m => m.TenBaiHoc.Contains(dataTimKiem));
+                baiHoc = baiHoc.OrderBy(x => x.TenBaiHoc);
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(dataTimKiem) && loaiTimKiem == "tenchude")
+                {
+                    baiHoc = baiHoc.Where(m => m.IdchuDeNavigation.TenChuDe.Contains(dataTimKiem));
+                    baiHoc = baiHoc.OrderBy(m => m.IdchuDeNavigation.TenChuDe);
+                }
+
+            }
+            return baiHoc.ToList();
+        }
         public BaiHocRepository(WebEnglishDBContext webEnglishDBContext)
         {
             this.webEnglishDBContext = webEnglishDBContext;

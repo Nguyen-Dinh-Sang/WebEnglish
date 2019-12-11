@@ -19,7 +19,10 @@ namespace CleanArchitecture.Application.Services
             this.iNguoiDungRepository = iNguoiDungRepository;
             this.iMapper = mapper;
         }
-
+        public IEnumerable<SaveNguoiDung> GetSearchTenNguoiDung(string dataTimKiem, string loaiTimKiem)
+        {
+            return iMapper.Map<IEnumerable<NguoiDung>, IEnumerable<SaveNguoiDung>>(iNguoiDungRepository.GetSearchTenNguoiDung(dataTimKiem, loaiTimKiem));
+        }
         public bool CheckTaiKhoan(string taiKhoan)
         {
             return iNguoiDungRepository.CheckTaiKhoan(taiKhoan);

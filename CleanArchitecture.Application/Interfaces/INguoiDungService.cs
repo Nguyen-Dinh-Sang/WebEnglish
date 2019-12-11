@@ -10,7 +10,7 @@ namespace CleanArchitecture.Application.Interfaces
         NguoiDungViewModel GetNguoiDungs();
 
         void Create(SaveNguoiDung save);
-
+        public IEnumerable<SaveNguoiDung> GetSearchTenNguoiDung(string dataTimKiem, string loaiTimKiem);
         SaveNguoiDung GetNguoiDung(int? iD);
 
         bool CheckTaiKhoan(string taiKhoan);

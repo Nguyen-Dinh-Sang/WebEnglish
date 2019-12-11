@@ -19,12 +19,21 @@ namespace CleanArchitectur.MVC.Controllers
             this.chuDeService = chuDeService;
             this.baiHocService = baiHocService;
         }
-        public IActionResult Index()
+        public IActionResult Index(string dataTimKiem,string loaiTimKiem)
         {
+            ViewBag.Name = HttpContext.Session.GetString("Ten");
             if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
             {
-                ViewBag.Name = HttpContext.Session.GetString("Ten");
-                return View(chuDeService.GetChuDes());
+                if (dataTimKiem == null)
+                {
+                    return View(chuDeService.GetChuDes());
+                }
+                else
+                {
+                    return View(chuDeService.GetSearchTenChuDe(dataTimKiem, loaiTimKiem));
+                }
+                
+                
             }
             return Redirect(@"~/NguoiDung/Login");
         }

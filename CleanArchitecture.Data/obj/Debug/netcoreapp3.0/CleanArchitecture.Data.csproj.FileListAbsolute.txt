@@ -37,3 +37,16 @@ C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreap
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.csproj.CopyComplete
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.dll
 C:\Users\Admin\Desktop\WEB\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.pdb
+E:\git\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.csprojAssemblyReference.cache
+E:\git\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.AssemblyInfoInputs.cache
+E:\git\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.AssemblyInfo.cs
+E:\git\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.dll
+E:\git\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.pdb
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.deps.json
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.runtimeconfig.json
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.runtimeconfig.dev.json
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.dll
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Data.pdb
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
+E:\git\WebEnglish\CleanArchitecture.Data\bin\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
+E:\git\WebEnglish\CleanArchitecture.Data\obj\Debug\netcoreapp3.0\CleanArchitecture.Data.csproj.CopyComplete

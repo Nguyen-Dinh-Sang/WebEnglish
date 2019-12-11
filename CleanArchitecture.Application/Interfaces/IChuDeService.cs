@@ -8,7 +8,7 @@ namespace CleanArchitecture.Application.Interfaces
     public interface IChuDeService
     {
         IEnumerable<ChuDeDTO> GetChuDes();
-
+        public IEnumerable<ChuDeDTO> GetSearchTenChuDe(string dataTimKiem, string loaiTimKiem);
         ChuDeDTO GetChuDe(int? Id);
 
         void Create(ChuDeDTO chuDe);

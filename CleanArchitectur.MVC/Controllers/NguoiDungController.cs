@@ -17,13 +17,21 @@ namespace CleanArchitectur.MVC.Controllers
             this.iNguoiDungService = iNguoiDungService;
         }
 
-        public IActionResult Index()
-        { 
-            if(HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+        public IActionResult Index(string dataTimKiem,string loaiTimKiem)
+        {
+            ViewBag.Name = HttpContext.Session.GetString("Ten");
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
             {
-                NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
-                ViewBag.Name = HttpContext.Session.GetString("Ten");
-                return View(model.NguoiDungs);
+                if (dataTimKiem == null)
+                {
+                    NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
+                    return View(model.NguoiDungs);
+                }
+                else
+                {
+                    return View(iNguoiDungService.GetSearchTenNguoiDung(dataTimKiem, loaiTimKiem));
+                }
+                
             }
             return RedirectToAction("Login");
         }

@@ -12,6 +12,17 @@ namespace CleanArchitecture.Data.Repository
     {
         private WebEnglishDBContext webEnglishDBContext;
 
+        public ICollection<ChuDe> GetSearchTenChuDe(string dataTimKiem, string loaiTimKiem)
+        {
+            var chuDe = from m in webEnglishDBContext.ChuDe
+                        select m;
+            if (!String.IsNullOrEmpty(dataTimKiem) && loaiTimKiem == "tenchude")
+            {
+                chuDe = chuDe.Where(m => m.TenChuDe.Contains(dataTimKiem));
+                chuDe = chuDe.OrderBy(x => x.TenChuDe);
+            }
+            return chuDe.ToList();
+        }
         public ChuDeRepository(WebEnglishDBContext webEnglishDBContext)
         {
             this.webEnglishDBContext = webEnglishDBContext;

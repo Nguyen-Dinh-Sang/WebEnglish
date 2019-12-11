@@ -9,7 +9,7 @@ namespace CleanArchitecture.Domain.Interfaces
     {
         IEnumerable<NguoiDung> GetNguoiDungs();
         void Add(NguoiDung nguoi);
-
+        public ICollection<NguoiDung> GetSearchTenNguoiDung(string dataTimKiem, string loaiTimKiem);
         NguoiDung GetNguoiDung(int? iD);
 
         public bool CheckTaiKhoan(string taiKhoan);

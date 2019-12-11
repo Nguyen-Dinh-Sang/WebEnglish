@@ -16,7 +16,25 @@ namespace CleanArchitecture.Data.Repository
         {
             this.webEnglishDBContext = webEnglishDBContext;
         }
-
+        public ICollection<NguoiDung> GetSearchTenNguoiDung(string dataTimKiem, string loaiTimKiem)
+        {
+            var nguoiDung = from m in webEnglishDBContext.NguoiDung
+                            select m;
+            if (!String.IsNullOrEmpty(dataTimKiem) && loaiTimKiem == "tennguoidung")
+            {
+                nguoiDung = nguoiDung.Where(m => m.TenNguoiDung.Contains(dataTimKiem));
+                nguoiDung = nguoiDung.OrderBy(x => x.TenNguoiDung);
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(dataTimKiem) && loaiTimKiem == "tentaikhoan")
+                {
+                    nguoiDung = nguoiDung.Where(m => m.TaiKhoan.Contains(dataTimKiem));
+                    nguoiDung = nguoiDung.OrderBy(x => x.TaiKhoan);
+                }
+            }
+            return nguoiDung.ToList();
+        }
         public void Add(NguoiDung nguoi)
         {
             if(nguoi.Id == 0)

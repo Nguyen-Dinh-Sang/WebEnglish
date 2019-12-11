@@ -9,6 +9,7 @@ namespace CleanArchitecture.Domain.Interfaces
     {
         ChiTietBaiHoc GetChiTietBaiHoc(int? Id);
 
+        ICollection<BaiHoc> Getbaihoc(string dataTimKiem, string loaiTimKiem);
         BaiKiemTra GetBaiKiemTra(int? Id);
 
         ICollection<CauHoi> GetCauHoi(int? Id);
