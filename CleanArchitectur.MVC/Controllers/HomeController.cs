@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CleanArchitectur.MVC.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace CleanArchitectur.MVC.Controllers
 {
@@ -20,7 +21,12 @@ namespace CleanArchitectur.MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                return View();
+            }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         public IActionResult Privacy()

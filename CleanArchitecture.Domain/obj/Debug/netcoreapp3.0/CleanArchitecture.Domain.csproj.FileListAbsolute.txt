@@ -28,3 +28,4 @@ E:\git\WebEnglish\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitec
 E:\git\WebEnglish\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.AssemblyInfo.cs
 E:\git\WebEnglish\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.dll
 E:\git\WebEnglish\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.pdb
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitecture.Domain\obj\Debug\netcoreapp3.0\CleanArchitecture.Domain.csprojAssemblyReference.cache

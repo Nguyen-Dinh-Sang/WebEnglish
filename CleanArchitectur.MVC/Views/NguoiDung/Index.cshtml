@@ -76,3 +76,15 @@
         }
     </tbody>
 </table>
+@{ 
+    double totalPages = ViewBag.TotalPages;
+
+    for(int i = 1; i <= totalPages; i++)
+    {
+    <ul class="pagination">
+            <li>
+                @Html.ActionLink(i.ToString(), "Index", new { dataTimKiem = ViewBag.dataTimKiem, loaiTimKiem = ViewBag.loaiTimKiem, PageNumber = i })
+            </li>
+    </ul>   
+    }
+}

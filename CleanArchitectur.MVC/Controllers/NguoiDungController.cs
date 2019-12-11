@@ -1,4 +1,6 @@
-﻿using CleanArchitecture.Application.Common;
+﻿using System;
+using System.Linq;
+using CleanArchitecture.Application.Common;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -17,7 +19,7 @@ namespace CleanArchitectur.MVC.Controllers
             this.iNguoiDungService = iNguoiDungService;
         }
 
-        public IActionResult Index(string dataTimKiem,string loaiTimKiem)
+        public IActionResult Index(string dataTimKiem, string loaiTimKiem, int PageNumber = 1)
         {
             ViewBag.Name = HttpContext.Session.GetString("Ten");
             if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
@@ -25,7 +27,11 @@ namespace CleanArchitectur.MVC.Controllers
                 if (dataTimKiem == null)
                 {
                     NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
-                    return View(model.NguoiDungs);
+                    ViewBag.TotalPages = Math.Ceiling(model.NguoiDungs.Count() / 5.0);
+                    ViewBag.dataTimKiem = dataTimKiem;
+                    ViewBag.loaiTimKiem = loaiTimKiem;
+                    var user = model.NguoiDungs.Skip((PageNumber - 1) * 5).Take(5).ToList();
+                    return View(user);
                 }
                 else
                 {
@@ -118,7 +124,7 @@ namespace CleanArchitectur.MVC.Controllers
                     HttpContext.Session.SetString("Ten", result.TenNguoiDung + "");
                     ViewBag.DNTC = "Đăng Nhập Thành Công";
                     ViewBag.Name = result.TenNguoiDung;
-                    return RedirectToAction("Index");
+                    return Redirect(@"~/Home/Index");
                 } else
                 {
                     ViewBag.KTC = "Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng";
