@@ -11,10 +11,10 @@ namespace CleanArchitecture.Application.Interfaces
 
         void Create(SaveNguoiDung save);
 
-        void remove(int? id);
-
         SaveNguoiDung GetNguoiDung(int? iD);
 
         bool CheckTaiKhoan(string taiKhoan);
+
+        public SaveNguoiDung Login(string tenDangNhap, string matKhau);
     }
 }

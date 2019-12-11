@@ -52,11 +52,20 @@ namespace CleanArchitecture.Data.Repository
             return webEnglishDBContext.NguoiDung;
         }
 
-        public void Remove(int? id)
+        public NguoiDung Login(string tenDangNhap, string matKhau)
         {
-            NguoiDung findResults = webEnglishDBContext.NguoiDung.Find(id);
-            webEnglishDBContext.Remove(findResults);
-            webEnglishDBContext.SaveChanges();
+            var nguoiDung = from m in webEnglishDBContext.NguoiDung
+                             where m.TaiKhoan == tenDangNhap
+                             select m;
+            if(nguoiDung.Count() > 0)
+            {
+                if(nguoiDung.First().MatKhau == matKhau)
+                {
+                    return nguoiDung.First();
+                }
+                return null;
+            }
+            return null;
         }
     }
 }

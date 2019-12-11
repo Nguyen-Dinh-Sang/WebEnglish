@@ -1,6 +1,8 @@
 ﻿using CleanArchitecture.Application.Common;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
@@ -16,9 +18,14 @@ namespace CleanArchitectur.MVC.Controllers
         }
 
         public IActionResult Index()
-        {
-            NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
-            return View(model.NguoiDungs);
+        { 
+            if(HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                NguoiDungViewModel model = iNguoiDungService.GetNguoiDungs();
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                return View(model.NguoiDungs);
+            }
+            return RedirectToAction("Login");
         }
 
         //Register
@@ -45,7 +52,8 @@ namespace CleanArchitectur.MVC.Controllers
                         VaiTro = SaveNguoiDung.VaiTroo.NguoiDungThuong
                     };
                     iNguoiDungService.Create(save);
-                    ViewBag.TC = "Tên Đăng Nhập Đã Tồn Tại";
+                    ViewBag.TC = "Đăng Ký Thành Công";
+                    return RedirectToAction("Login");
                 }
             }
             return View(nguoiDung);
@@ -61,8 +69,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var nguoiDung = iNguoiDungService.GetNguoiDung(Id);
-                return View(nguoiDung);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                { 
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var nguoiDung = iNguoiDungService.GetNguoiDung(Id);
+                    return View(nguoiDung);
+                }
+                return RedirectToAction("Login");
             }
         }
 
@@ -75,6 +88,35 @@ namespace CleanArchitectur.MVC.Controllers
                 return RedirectToAction("Index");
             }
             return View(save);
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            HttpContext.Session.Clear();
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(LoginModel loginModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = iNguoiDungService.Login(loginModel.TaiKhoan, loginModel.MatKhau);
+                if (result != null)
+                {
+                    HttpContext.Session.SetString("ID", result.Id + "");
+                    HttpContext.Session.SetString("VaiTro", result.VaiTro + "");
+                    HttpContext.Session.SetString("Ten", result.TenNguoiDung + "");
+                    ViewBag.DNTC = "Đăng Nhập Thành Công";
+                    ViewBag.Name = result.TenNguoiDung;
+                    return RedirectToAction("Index");
+                } else
+                {
+                    ViewBag.KTC = "Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng";
+                }
+            }
+            return View(loginModel);
         }
     }
 }

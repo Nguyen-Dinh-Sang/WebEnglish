@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
@@ -20,13 +21,23 @@ namespace CleanArchitectur.MVC.Controllers
         }
         public IActionResult Index()
         {
-            return View(chuDeService.GetChuDes());
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                return View(chuDeService.GetChuDes());
+            }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                return View();
+            }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         [HttpPost]
@@ -50,8 +61,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var chuDe = chuDeService.GetChuDe(Id);
-                return View(chuDe);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var chuDe = chuDeService.GetChuDe(Id);
+                    return View(chuDe);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -71,8 +87,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var chuDe = chuDeService.GetChuDe(Id);
-                return View(chuDe);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var chuDe = chuDeService.GetChuDe(Id);
+                    return View(chuDe);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -95,12 +116,17 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var chuDeViewDetails = new ChuDeViewDetails()
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
                 {
-                    chuDe = chuDeService.GetChuDe(Id),
-                    baiHocs = chuDeService.GetBaiHocs(Id)
-                };
-                return View(chuDeViewDetails);
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var chuDeViewDetails = new ChuDeViewDetails()
+                    {
+                        chuDe = chuDeService.GetChuDe(Id),
+                        baiHocs = chuDeService.GetBaiHocs(Id)
+                    };
+                    return View(chuDeViewDetails);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -113,8 +139,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var baiHoc = baiHocService.GetBaiHoc(Id);
-                return View(baiHoc);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var baiHoc = baiHocService.GetBaiHoc(Id);
+                    return View(baiHoc);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -135,8 +166,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var baiHoc = baiHocService.GetBaiHoc(Id);
-                return View(baiHoc);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var baiHoc = baiHocService.GetBaiHoc(Id);
+                    return View(baiHoc);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 

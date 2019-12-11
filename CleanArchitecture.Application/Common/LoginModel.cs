@@ -7,9 +7,11 @@ namespace CleanArchitecture.Application.Common
 {
     public class LoginModel
     {
+        [Display(Name = "Tài Khoản")]
         [Required(ErrorMessage = "Tài Khoản Không Được Để Trống")]
         public string TaiKhoan { get; set; }
 
+        [Display(Name = "Tài Khoản")]
         [Required(ErrorMessage = "Mật Khẩu Không Được Để Trống")]
         public string MatKhau { get; set; }
 

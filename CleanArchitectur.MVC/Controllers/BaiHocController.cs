@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
@@ -25,14 +26,24 @@ namespace CleanArchitectur.MVC.Controllers
         }
         public IActionResult Index()
         {
-            return View(baiHocService.GetBaiHocs());
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                return View(baiHocService.GetBaiHocs());
+            }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.ChuDe = ChuDeService.GetChuDes();
-            return View();
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                ViewBag.ChuDe = ChuDeService.GetChuDes();
+                return View();
+            }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         [HttpPost]
@@ -50,7 +61,12 @@ namespace CleanArchitectur.MVC.Controllers
         [HttpGet]
         public IActionResult CreateChiTietBaiHoc()
         {
-            return View(new BaiHocUpload());
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+            {
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                return View(new BaiHocUpload());
+            }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         [HttpPost]
@@ -82,15 +98,21 @@ namespace CleanArchitectur.MVC.Controllers
         [HttpGet]
         public IActionResult CreateCauHoi()
         {
-            if(SoCauHoi == 3)
+            if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
             {
-                var baiHoc = baiHocService.GetBaiHoc(baiHocService.GetIDBaiHoc());
-                return RedirectToAction("Details", baiHoc);
-            } else
-            {
-                SoCauHoi = SoCauHoi + 1;
-                return View();
+                ViewBag.Name = HttpContext.Session.GetString("Ten");
+                if (SoCauHoi == 3)
+                {
+                    var baiHoc = baiHocService.GetBaiHoc(baiHocService.GetIDBaiHoc());
+                    return RedirectToAction("Details", baiHoc);
+                }
+                else
+                {
+                    SoCauHoi = SoCauHoi + 1;
+                    return View();
+                }
             }
+            return Redirect(@"~/NguoiDung/Login");
         }
 
         [HttpPost]
@@ -115,8 +137,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var baiHoc = baiHocService.GetBaiHoc(Id);
-                return View(baiHoc);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var baiHoc = baiHocService.GetBaiHoc(Id);
+                    return View(baiHoc);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -135,15 +162,20 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var baiHocViewDetails = new BaiHocViewDetails()
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
                 {
-                    baiHoc = baiHocService.GetBaiHoc(Id),
-                    chiTietBaiHoc = baiHocService.GetChiTiet(Id),
-                    cauHois = baiHocService.GetCauHoi(Id)
-                };
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var baiHocViewDetails = new BaiHocViewDetails()
+                    {
+                        baiHoc = baiHocService.GetBaiHoc(Id),
+                        chiTietBaiHoc = baiHocService.GetChiTiet(Id),
+                        cauHois = baiHocService.GetCauHoi(Id)
+                    };
+                    var baiHoc = baiHocService.GetBaiHoc(Id);
+                    return View(baiHocViewDetails);
+                }
+                return Redirect(@"~/NguoiDung/Login");
 
-                var baiHoc = baiHocService.GetBaiHoc(Id);
-                return View(baiHocViewDetails);
             }
         }
 
@@ -157,8 +189,13 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var cauHoi = baiHocService.GetCauHoiEdit(Id);
-                return View(cauHoi);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var cauHoi = baiHocService.GetCauHoiEdit(Id);
+                    return View(cauHoi);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -184,12 +221,17 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                var chiTietBaiHoc = baiHocService.GetChiTiet(Id);
-                BaiHocUpload baiHocUpload = new BaiHocUpload()
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
                 {
-                    BaiHoc = baiHocService.GetChiTiet(Id),
-                };
-                return View(baiHocUpload);
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    var chiTietBaiHoc = baiHocService.GetChiTiet(Id);
+                    BaiHocUpload baiHocUpload = new BaiHocUpload()
+                    {
+                        BaiHoc = baiHocService.GetChiTiet(Id),
+                    };
+                    return View(baiHocUpload);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 
@@ -225,9 +267,14 @@ namespace CleanArchitectur.MVC.Controllers
             }
             else
             {
-                ViewBag.ChuDe = ChuDeService.GetChuDes();
-                var baiHoc = baiHocService.GetBaiHoc(Id);
-                return View(baiHoc);
+                if (HttpContext.Session.GetString("VaiTro") == "NguoiQuanTri")
+                {
+                    ViewBag.Name = HttpContext.Session.GetString("Ten");
+                    ViewBag.ChuDe = ChuDeService.GetChuDes();
+                    var baiHoc = baiHocService.GetBaiHoc(Id);
+                    return View(baiHoc);
+                }
+                return Redirect(@"~/NguoiDung/Login");
             }
         }
 

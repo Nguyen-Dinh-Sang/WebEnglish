@@ -294,8 +294,6 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\C
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\staticwebassets\CleanArchitectur.MVC.StaticWebAssets.Manifest.cache
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\staticwebassets\CleanArchitectur.MVC.StaticWebAssets.xml
-C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.RazorAssemblyInfo.cache
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.RazorAssemblyInfo.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.AssemblyInfoInputs.cache
@@ -519,3 +517,7 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\S
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Register.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Login.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\CleanArchitectur.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll

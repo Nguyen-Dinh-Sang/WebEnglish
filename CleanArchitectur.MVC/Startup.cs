@@ -43,6 +43,8 @@ namespace CleanArchitectur.MVC
                 options.UseSqlServer(Configuration.GetConnectionString("WebEnglishDBConnection"));
             });
 
+            services.AddSession();
+
             RegisterServices(services);
         }
 
@@ -67,6 +69,8 @@ namespace CleanArchitectur.MVC
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

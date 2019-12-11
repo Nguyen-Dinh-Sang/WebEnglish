@@ -10,10 +10,10 @@ namespace CleanArchitecture.Domain.Interfaces
         IEnumerable<NguoiDung> GetNguoiDungs();
         void Add(NguoiDung nguoi);
 
-        void Remove(int? id);
-
         NguoiDung GetNguoiDung(int? iD);
 
         public bool CheckTaiKhoan(string taiKhoan);
+
+        public NguoiDung Login(string tenDangNhap, string matKhau);
     }
 }

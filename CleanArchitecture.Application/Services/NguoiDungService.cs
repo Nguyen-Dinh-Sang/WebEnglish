@@ -48,9 +48,9 @@ namespace CleanArchitecture.Application.Services
 
         }
 
-        public void remove(int? id)
+        public SaveNguoiDung Login(string tenDangNhap, string matKhau)
         {
-            iNguoiDungRepository.Remove(id);
+            return iMapper.Map<NguoiDung, SaveNguoiDung>(iNguoiDungRepository.Login(tenDangNhap, matKhau));
         }
     }
 }
