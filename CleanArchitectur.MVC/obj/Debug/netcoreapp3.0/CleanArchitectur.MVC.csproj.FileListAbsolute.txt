@@ -312,8 +312,6 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\R
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\ChuDe\Index.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Create.cshtml.g.cs
-C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Delete.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Index.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -519,3 +517,5 @@ C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\R
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\System.IO.Pipelines.dll
 C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Register.cshtml.g.cs
+C:\Users\Admin\Desktop\WebEnglish\CleanArchitectur.MVC\obj\Debug\netcoreapp3.0\Razor\Views\NguoiDung\Login.cshtml.g.cs

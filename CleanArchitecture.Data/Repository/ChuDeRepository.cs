@@ -55,7 +55,7 @@ namespace CleanArchitecture.Data.Repository
             var baiHoc = from m in webEnglishDBContext.BaiHoc
                            where m.IdchuDe == Id
                            select m;
-            return baiHoc.Distinct().ToList();
+            return baiHoc.OrderBy(x => x.BaiSo).ToList();
         }
 
         public ICollection<ThamGiaChuDe> GetThamGiaChuDes(int? Id)

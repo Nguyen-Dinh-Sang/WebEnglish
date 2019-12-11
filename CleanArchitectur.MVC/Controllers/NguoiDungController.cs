@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CleanArchitecture.Application.Common;
 using CleanArchitecture.Application.Interfaces;
 using CleanArchitecture.Application.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectur.MVC.Controllers
@@ -25,47 +21,37 @@ namespace CleanArchitectur.MVC.Controllers
             return View(model.NguoiDungs);
         }
 
+        //Register
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(SaveNguoiDung save)
+        public IActionResult Register(RegisterNguoiDung nguoiDung)
         {
             if (ModelState.IsValid)
             {
-                save.Id = 0;
-                iNguoiDungService.Create(save);
-                return RedirectToAction("Index");
+                if (iNguoiDungService.CheckTaiKhoan(nguoiDung.TaiKhoan))
+                {
+                    ViewBag.TB = "Tên Đăng Nhập Đã Tồn Tại";
+                } else
+                {
+                    SaveNguoiDung save = new SaveNguoiDung()
+                    {
+                        TaiKhoan = nguoiDung.TaiKhoan,
+                        MatKhau = nguoiDung.MatKhau,
+                        VaiTro = SaveNguoiDung.VaiTroo.NguoiDungThuong
+                    };
+                    iNguoiDungService.Create(save);
+                    ViewBag.TC = "Tên Đăng Nhập Đã Tồn Tại";
+                }
             }
-            return View(save);
+            return View(nguoiDung);
         }
 
-        //[Route("NguoiDung/Delete/{maUser}")]
-
-        [HttpGet]
-        public IActionResult Delete(int? Id)
-        {
-            if (Id == null)
-            {
-                return NotFound();
-            }
-            else
-            {
-                var nguoiDung = iNguoiDungService.GetNguoiDung(Id);
-                return View(nguoiDung);
-            }
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteConfirm(int? Id)
-        {
-            iNguoiDungService.remove(Id);
-            return RedirectToAction("Index");
-        }
-
+        /////
         [HttpGet]
         public IActionResult Edit(int? Id)
         {

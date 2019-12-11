@@ -20,6 +20,11 @@ namespace CleanArchitecture.Application.Services
             this.iMapper = mapper;
         }
 
+        public bool CheckTaiKhoan(string taiKhoan)
+        {
+            return iNguoiDungRepository.CheckTaiKhoan(taiKhoan);
+        }
+
         public void Create(SaveNguoiDung save)
         {
                 var nguoiDung = iMapper.Map<SaveNguoiDung, NguoiDung>(save);

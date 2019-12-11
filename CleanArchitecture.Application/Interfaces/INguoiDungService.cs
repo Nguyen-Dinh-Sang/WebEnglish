@@ -15,5 +15,6 @@ namespace CleanArchitecture.Application.Interfaces
 
         SaveNguoiDung GetNguoiDung(int? iD);
 
+        bool CheckTaiKhoan(string taiKhoan);
     }
 }

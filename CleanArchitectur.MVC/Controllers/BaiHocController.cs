@@ -54,6 +54,7 @@ namespace CleanArchitectur.MVC.Controllers
         }
 
         [HttpPost]
+        [Obsolete]
         public IActionResult CreateChiTietBaiHoc(BaiHocUpload model)
         {
             if (model.MyMp3 != null)
@@ -193,6 +194,7 @@ namespace CleanArchitectur.MVC.Controllers
         }
 
         [HttpPost, ActionName("EditChiTietBaiHoc")]
+        [Obsolete]
         public IActionResult EditChiTietBaiHocConfirm(BaiHocUpload chiTietBaiHoc)
         {
             if (ModelState.IsValid)

@@ -4,6 +4,7 @@ using System.Text;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
 using CleanArchitecture.Data.Context;
+using System.Linq;
 
 namespace CleanArchitecture.Data.Repository
 {
@@ -33,6 +34,11 @@ namespace CleanArchitecture.Data.Repository
                 findResults.VaiTro = nguoi.VaiTro;
                 webEnglishDBContext.SaveChanges();
             }
+        }
+
+        public bool CheckTaiKhoan(string taiKhoan)
+        {
+            return webEnglishDBContext.NguoiDung.Count(x => x.TaiKhoan == taiKhoan) > 0;
         }
 
         public NguoiDung GetNguoiDung(int? iD)
