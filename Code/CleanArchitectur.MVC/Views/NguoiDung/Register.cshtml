@@ -1,0 +1,46 @@
+﻿@model CleanArchitecture.Application.Common.RegisterNguoiDung
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+@if (ViewBag.TB != null)
+{
+    <div class="alert alert-danger">Tên Đăng Nhập Đã Tồn Tại</div>
+}
+
+@if (ViewBag.TC != null)
+{
+    <div class="alert alert-success">Đăng Ký Thành Công</div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Register">
+            <h4>Create a new account.</h4>
+            <hr>
+            <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                <ul>
+                    <li style="display:none"></li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaiKhoan" class="control-label"></label>
+                <input asp-for="TaiKhoan" class="form-control">
+                <span asp-validation-for="TaiKhoan" class="text-danger field-validation-valid"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatKhau" class="control-label"></label>
+                <input class="form-control" type="password" asp-for="MatKhau">
+                <span asp-validation-for="MatKhau" class="text-danger field-validation-valid"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmMatKhau" class="control-label"></label>
+                <input class="form-control" type="password" asp-for="ConfirmMatKhau">
+                <span asp-validation-for="ConfirmMatKhau" class="text-danger field-validation-valid"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" value="Register">Register</button>
+        </form>
+    </div>
+</div>

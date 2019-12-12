@@ -1,0 +1,20 @@
+﻿<ul class="navbar-nav">
+    @if (ViewBag.Name != null)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="NguoiDung" asp-action="Register">Hello @ViewBag.Name</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="NguoiDung" asp-action="Login">Logout</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="NguoiDung" asp-action="Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="NguoiDung" asp-action="Login">Login</a>
+        </li>
+    }
+</ul>

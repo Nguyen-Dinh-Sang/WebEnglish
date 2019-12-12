@@ -1,0 +1,59 @@
+﻿@model CleanArchitecture.Application.Common.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Log in</h1>
+@if (ViewBag.KTC != null)
+{
+    <div class="alert alert-danger">@ViewBag.KTC</div>
+}
+
+@if (ViewBag.DNTC != null)
+{
+    <div class="alert alert-success">@ViewBag.DNTC</div>
+}
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post" novalidate="novalidate">
+                <h4>Use a local account to log in.</h4>
+                <hr>
+                <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                    <ul>
+                        <li style="display:none"></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TaiKhoan" class="control-label"></label>
+                    <input asp-for="TaiKhoan" class="form-control">
+                    <span asp-validation-for="TaiKhoan" class="text-danger field-validation-valid"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MatKhau" class="control-label"></label>
+                    <input class="form-control" type="password" asp-for="MatKhau">
+                    <span asp-validation-for="MatKhau" class="text-danger field-validation-valid"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="RememberMe">
+                            <input asp-for="RememberMe" type="checkbox" data-val="true" data-val-required="The Remember me? field is required." id="Input_RememberMe" name="Input.RememberMe" value="true">
+                            Remember me?
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button id="login-submit" type="submit" class="btn btn-primary">Log in</button>
+                </div>
+                <div class="form-group">
+                    <p>
+                        <a id="forgot-password" href="https://localhost:44315/Identity/Account/ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a asp-area="" asp-controller="NguoiDung" asp-action="Register">Register as a new user</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

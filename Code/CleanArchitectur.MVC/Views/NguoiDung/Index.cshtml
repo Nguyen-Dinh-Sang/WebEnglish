@@ -1,0 +1,90 @@
+﻿@model IEnumerable<CleanArchitecture.Application.ViewModels.SaveNguoiDung>
+
+@{
+    ViewData["Title"] = "NguoiDung";
+}
+
+<h1>Người Dùng</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        <select name="loaiTimKiem">
+
+            <option value="tennguoidung">Tên Người Dùng</option>
+            <option value="tentaikhoan">Tên Tài Khoản</option>
+
+        </select>
+        Title: @Html.TextBox("dataTimKiem") <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNguoiDung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaiKhoan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayTao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoDienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VaiTro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiDung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaiKhoan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VaiTro)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{ 
+    double totalPages = ViewBag.TotalPages;
+
+    for(int i = 1; i <= totalPages; i++)
+    {
+    <div class="pagination" style="float:left">
+            
+                @Html.ActionLink(i.ToString(), "Index", new { dataTimKiem = ViewBag.dataTimKiem, loaiTimKiem = ViewBag.loaiTimKiem, PageNumber = i })
+            
+    </div>   
+    }
+}

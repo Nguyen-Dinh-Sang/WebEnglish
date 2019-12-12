@@ -1,0 +1,77 @@
+﻿@model CleanArchitecture.Application.ViewModels.ChuDeViewDetails
+
+@{
+    ViewData["Title"] = "ChuDe";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Chủ Đề</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.chuDe.TenChuDe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.chuDe.TenChuDe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.chuDe.ThongTin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.chuDe.ThongTin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.chuDe.NgayTao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.chuDe.NgayTao)
+        </dd>
+        <dt class = "col-sm-2">
+            Các Bài Học
+        </dt>
+        <dd>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Thứ Tự
+                        </th>
+                        <th>
+                            Bài Học
+                        </th>
+                        <th>
+                            Ngày Tạo
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.baiHocs)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BaiSo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenBaiHoc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayTao)
+                        </td>
+                        <td>
+                            <a asp-action="EditBaiHoc" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="DeleteBaiHoc" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.chuDe.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

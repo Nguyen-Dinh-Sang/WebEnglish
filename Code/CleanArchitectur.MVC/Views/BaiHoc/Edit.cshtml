@@ -1,0 +1,46 @@
+﻿@model CleanArchitecture.Application.ViewModels.BaiHocDTO
+
+@{
+    ViewData["Title"] = "BaiHoc";
+}
+
+<h1>Edit</h1>
+
+<h4>Bài Học</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="BaiSo" />
+            <div class="form-group">
+                <label asp-for="IdchuDe" class="control-label"></label>
+                <select asp-for="IdchuDe" class="form-control" asp-items="@(new SelectList(ViewBag.ChuDe,"Id","TenChuDe"))">
+                </select>
+                <span asp-validation-for="IdchuDe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenBaiHoc" class="control-label"></label>
+                <input asp-for="TenBaiHoc" class="form-control" />
+                <span asp-validation-for="TenBaiHoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayTao" class="control-label"></label>
+                <input asp-for="NgayTao" class="form-control" readonly/>
+                <span asp-validation-for="NgayTao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CleanArchitecture.Application.ViewModels.BaiHocDTO>
+
+@{
+    ViewData["Title"] = "BaiHoc";
+}
+
+<h1>Bài Học</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        <select name="loaiTimKiem">
+            <option value="tenbaihoc">Tên bài học</option>
+            <option value="tenchude">Tên chủ đề</option>
+        </select>
+        Title: @Html.TextBox("dataTimKiem") <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenBaiHoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayTao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdchuDeNavigation.TenChuDe)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenBaiHoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdchuDeNavigation.TenChuDe)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+    double totalPages = ViewBag.TotalPages;
+
+    for (int i = 1; i <= totalPages; i++)
+    {
+        <div class="pagination" style="float:left">
+
+            @Html.ActionLink(i.ToString(), "Index", new { dataTimKiem = ViewBag.dataTimKiem, loaiTimKiem = ViewBag.loaiTimKiem, PageNumber = i })
+
+        </div>
+    }
+}
