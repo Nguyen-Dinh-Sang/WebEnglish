@@ -9079,11 +9079,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\WebEnglish\\Code\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
       "projectName": "CleanArchitectur.MVC",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\Code\\CleanArchitectur.MVC\\CleanArchitectur.MVC.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitectur.MVC\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\Code\\CleanArchitectur.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9102,8 +9102,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
+            "C:\\Users\\Admin\\Desktop\\WebEnglish\\Code\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\WebEnglish\\Code\\CleanArchitecture.IoC\\CleanArchitecture.IoC.csproj"
             }
           }
         }
